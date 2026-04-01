@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/Gemini_Generated_Image_js3khejs3khejs3k.png);    
+}
+
+nav{
+    background: linear-gradient(145deg, #ff0000 45%, #000000 45%, #000000 55%, #ffffff 55%);
+    padding: 1rem;
+}
+
+
+
+.pikachu-logo {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.pikachu-logo:hover {
+    transform: scale(1.05);
+}
+
+nav h1{
+    color: #FFDE00;
+    text-shadow: 2px 2px 0 #2A75BB, 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-family: 'Press Start 2P', cursive;
+    transition: transform 0.3s ease;
+}
+
+nav h1:hover{
+    transform: scale(1.02);
+}
+
+nav  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+nav ul li a{
+    color: #FFDE00;
+    text-shadow: 2px 2px 0 #2A75BB, 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav ul li a:hover{
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* PokeDex */
+.titulo{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    color: #ff0000;
+    text-align: center;
+    margin: 2rem;
+    text-shadow: 2px 2px 0 #000000;
+    animation: traspariencia 1.2s ease-in;
+}
+
+@keyframes traspariencia {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pokedex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 4rem;
+    background: rgb(255, 255, 255, 0.8);
+    border-radius: 20px;
+    margin: 2rem auto;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 1450px;
+    height: 400px;
+    
+}
+
+.filtros{
+    flex: 1;
+}
+
+.pokedex .filtros{
+    color: #000000;
+    text-align: center;
+}
+
+.filtros label{
+    font-family: 'Press Start 2P', cursive;
+    color: #ff0000;
+    font-size: 3rem;
+    margin: 0;
+    display: block;
+    text-shadow: 2px 2px 0 #000000 ;
+    animation-name:  caida;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.filtros input{
+    margin-top: 1rem;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    animation-name:  caida;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+button {
+  background-color: #E63946;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 10px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation-name:  caida;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.filtros .busqueda{
+    margin: 20px auto;
+    font-size: 1.2rem;
+    animation-name:  caida;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+
+
+.buscador-pokemon{
+    flex: 1;
+    height: 150px;
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name:  caida;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes caida {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.buscador-pokemon p{
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: center; 
+    width: 100%;
+}
