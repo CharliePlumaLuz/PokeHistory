@@ -353,6 +353,7 @@ button {
 .tipo-electrico {
     background: #eed535;
     color: white;
+    padding: 5px;
 }
 
 .tipo-tierra {
@@ -362,5 +363,41 @@ button {
 
 .tipo-hada {
     background: #fdb9e9;
+    color: white;
+}
+
+.tipo-lucha {
+    background: #d56723;
+    color: white;
+}
+
+.tipo-psiquico {
+    background: #f366b9;
+    color: white;
+}
+
+.tipo-roca {
+    background: #a38c21;
+    color: white;
+}
+
+.tipo-acero {
+    background: #9eb7b8;
+    color: white;
+    
+}
+
+.tipo-fantasma {
+    background: #7b62a3;
+    color: white;
+}
+
+.tipo-hielo {
+    background: #51c4e7;
+    color: white;
+}
+
+.tipo-dragon {
+    background: #53a4cf;
     color: white;
 }
