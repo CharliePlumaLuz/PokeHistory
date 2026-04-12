@@ -8,6 +8,191 @@ body {
     background: url(../img/Gemini_Generated_Image_js3khejs3khejs3k.png);    
 }
 
+
+
+/* ========== PANTALLA DE CARGA INICIAL ========== */
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    text-align: center;
+    animation: fadeInUp 0.6s ease;
+}
+
+/* Pokébola animada */
+.pokeball-loader {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    background: linear-gradient(145deg, #ff0000 45%, #000000 45%, #000000 55%, #ffffff 55%);
+    border-radius: 50%;
+    border: 4px solid #000000;
+    position: relative;
+    animation: shakePokeball 0.8s ease-in-out infinite, spinPokeball 2s linear infinite;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.pokeball-loader::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #000000;
+    transform: translateY(-50%);
+}
+
+.pokeball-loader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border: 4px solid #000000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Animaciones de la Pokébola */
+@keyframes shakePokeball {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(-8deg);
+    }
+    75% {
+        transform: translateY(10px) rotate(8deg);
+    }
+}
+
+@keyframes spinPokeball {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Título */
+.splash-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.5rem;
+    color: #FFDE00;
+    text-shadow: 4px 4px 0 #2A75BB, 2px 2px 0 #000000;
+    margin-bottom: 1rem;
+    animation: blinkText 1.5s ease-in-out infinite;
+}
+
+/* Texto de carga */
+.splash-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+/* Barra de progreso */
+.loading-bar {
+    width: 250px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #FFDE00, #ff0000);
+    border-radius: 10px;
+    animation: loadingProgress 2s ease-out forwards;
+}
+
+@keyframes loadingProgress {
+    0% { width: 0%; }
+    20% { width: 25%; }
+    40% { width: 45%; }
+    60% { width: 65%; }
+    80% { width: 85%; }
+    100% { width: 100%; }
+}
+
+/* Texto secundario */
+.splash-subtext {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blinkText {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pokeball-loader {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .splash-title {
+        font-size: 1.5rem;
+    }
+    
+    .splash-text {
+        font-size: 0.7rem;
+    }
+    
+    .loading-bar {
+        width: 180px;
+    }
+}
+
+
+
 nav{
     background: linear-gradient(145deg, #ff0000 45%, #000000 45%, #000000 55%, #ffffff 55%);
     padding: 1rem;
@@ -70,6 +255,116 @@ nav ul li a:hover{
     border-radius: 5px;
 }
 
+
+/* Musica de la Pagina */
+/* ========== REPRODUCTOR DE MÚSICA VISIBLE ========== */
+
+.music-player-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 222, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.music-toggle {
+    background: linear-gradient(145deg, #ff0000, #cc0000);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: #FFDE00;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.music-toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+
+.music-icon {
+    font-size: 18px;
+}
+
+.music-text {
+    font-size: 10px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    padding: 5px 15px;
+    border-radius: 30px;
+}
+
+#volumeSlider {
+    width: 100px;
+    height: 4px;
+    -webkit-appearance: none;
+    background: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #FFDE00;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-value {
+    color: #FFDE00;
+    font-size: 11px;
+    font-family: monospace;
+    min-width: 35px;
+}
+
+#songName{
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .music-player {
+        padding: 8px 15px;
+    }
+    
+    .music-toggle {
+        padding: 8px 15px;
+    }
+    
+    .music-text {
+        display: none;
+    }
+    
+    #volumeSlider {
+        width: 70px;
+    }
+}
+
+
 /* PokeDex */
 .titulo{
     font-family: 'Press Start 2P', cursive;
@@ -117,7 +412,7 @@ nav ul li a:hover{
 .filtros label{
     font-family: 'Press Start 2P', cursive;
     color: #ff0000;
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin: 0;
     display: block;
     text-shadow: 2px 2px 0 #000000 ;
@@ -371,7 +666,7 @@ button {
     color: white;
 }
 
-.tipo-psiquico {
+.tipo-psíquico {
     background: #f366b9;
     color: white;
 }
@@ -401,3 +696,235 @@ button {
     background: #53a4cf;
     color: white;
 }
+
+.tipo-siniestro {
+    background: #707070;
+    color: white;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.cerrar-modal:hover {
+    color: #ff0000;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    padding: 25px;
+    border-radius: 30px 30px 0 0;
+    text-align: center;
+    color: white;
+}
+
+.modal-header h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.modal-header p {
+    font-family: monospace;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.modal-body {
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.modal-imagen {
+     flex: 1;
+    min-width: 200px;
+    text-align: center;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 0;              
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;        
+}
+
+
+.modal-imagen img {
+    width: 100%;
+    height: 100%;            
+    min-height: 280px;       
+    object-fit: cover;       
+    display: block;
+   
+}
+
+.modal-info {
+    flex: 2;
+    min-width: 250px;
+}
+
+.info-section {
+    margin-bottom: 25px;
+}
+
+.info-section h3 {
+    color: #ff0000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-left: 4px solid #ff0000;
+    padding-left: 10px;
+}
+
+.info-section p {
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.info-types h3, .info-weakness h3 {
+    color: #ff0000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    margin: 15px 0 10px 0;
+    border-left: 4px solid #ff0000;
+    padding-left: 10px;
+}
+
+#modalTipos, #modalDebilidades {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.info-item-habilidad {
+    grid-column: span 2;
+    text-align: left;
+    padding: 12px;
+    text-align: center;
+}
+
+.habilidad-descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 8px;
+    line-height: 1.4;
+    text-align: justify;
+    border-top: 1px dashed #ddd;
+    padding-top: 8px;
+    text-align: center;
+}
+
+
+.info-item-habilidad.single {
+    grid-column: span 1;
+}
+
+.info-item-habilidad.single .habilidad-descripcion {
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+
+/* Scrollbar personalizada */
+.modal-contenido::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-contenido::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-contenido::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+

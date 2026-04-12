@@ -11,6 +11,20 @@
     <title>PokéDex</title>
   </head>
   <body>
+
+    <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+        <div class="pokeball-loader"></div>
+        <h1 class="splash-title">PokéDex</h1>
+        <p class="splash-text">Cargando tu PokéDex...</p>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <p class="splash-subtext">¡Atrapa tus Pokémon favoritos!</p>
+    </div>
+</div>
+
+
     <nav class="navbar">
       <ul>
         <li>
@@ -28,13 +42,31 @@
       </ul>
     </nav>
 
+    <!-- Musica de la pagina -->
+     <div class="music-player" id="musicPlayer">
+    <button class="music-toggle" id="musicToggle">
+        <span class="music-icon">🎵</span>
+    </button>
+    <div class="music-controls">
+        <div class="volume-control">
+            <span class="volume-icon">🔊</span>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+            <span class="volume-value" id="volumeValue">50%</span>
+        </div>
+        <div class="song-info">
+            <span id="songName">🎵 Música Pokémon</span>
+        </div>
+    </div>
+</div>
+
+
     <!-- Pokedex -->
     <h2 class="titulo">PokéDex</h2>
     <section class="pokedex">
       <div class="filtros">
-        <label>Nombre o Número</label>
-        <input class="buscador" type="search" />
-        <button>Buscar Pokemón 🔍</button>
+        <label>Nombre, Número o Región</label>
+        <input class="buscador" type="search" id="buscadorPokemon" />
+        <button id="btnBuscarPokemon">Buscar Pokemón 🔍</button>
         <p class="busqueda">
           Busca un Pokemón por su nombre o usando su numero de la PokéDex
           Nacional
@@ -47,6 +79,8 @@
         </p>
       </div>
     </section>
+
+    
 
     <div class="contenedor">
       <div class="grid-cuadrados">
@@ -72,10 +106,10 @@
             <img src="img/pokedex/ivysaur.jpg" alt="ivysaur" />
           </div>
           <div class="texto">
-           <div class="tipos">
-            <span class="tipo tipo-planta">Planta</span>
-            <span class="tipo tipo-veneno">Veneno</span>
-           </div>
+            <div class="tipos">
+              <span class="tipo tipo-planta">Planta</span>
+              <span class="tipo tipo-veneno">Veneno</span>
+            </div>
           </div>
         </div>
 
@@ -432,7 +466,10 @@
           <p class="numero-pokemon">N.° 0029</p>
           <h3 class="nombre-pokemon">Nidoran ♀</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Nidoran Female Pokemon Vertical Wallpaper.jpg" alt="nidoran female " />
+            <img
+              src="img/pokedex/Nidoran Female Pokemon Vertical Wallpaper.jpg"
+              alt="nidoran female "
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -458,7 +495,10 @@
           <p class="numero-pokemon">N.° 0031</p>
           <h3 class="nombre-pokemon">Nidoqueen</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Nidoqueen & Nidorino & Nidoran.jpg" alt="nidoqueen" />
+            <img
+              src="img/pokedex/Nidoqueen & Nidorino & Nidoran.jpg"
+              alt="nidoqueen"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -485,7 +525,10 @@
           <p class="numero-pokemon">N.° 0033</p>
           <h3 class="nombre-pokemon">Nidorino</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Nidorino Pokemon Vertical Wallpaper.jpg" alt="nidorino" />
+            <img
+              src="img/pokedex/Nidorino Pokemon Vertical Wallpaper.jpg"
+              alt="nidorino"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -525,7 +568,10 @@
           <p class="numero-pokemon">N.° 0036</p>
           <h3 class="nombre-pokemon">Clefable</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Clefable - Pokémon Lockscreen by @hyogonosuke.jpg" alt="clefable" />
+            <img
+              src="img/pokedex/Clefable - Pokémon Lockscreen by @hyogonosuke.jpg"
+              alt="clefable"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -578,7 +624,10 @@
           <p class="numero-pokemon">N.° 0040</p>
           <h3 class="nombre-pokemon">Wigglytuff</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Wigglytuff Female Pokemon Vertical Wallpaper.jpg" alt="Wigglytuff" />
+            <img
+              src="img/pokedex/Wigglytuff Female Pokemon Vertical Wallpaper.jpg"
+              alt="Wigglytuff"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -620,7 +669,10 @@
           <p class="numero-pokemon">N.° 0043</p>
           <h3 class="nombre-pokemon">Oddish</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/ODDISH WAKE UP, Emi Montagna.jpg" alt="oddish" />
+            <img
+              src="img/pokedex/ODDISH WAKE UP, Emi Montagna.jpg"
+              alt="oddish"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -704,7 +756,10 @@
           <p class="numero-pokemon">N.° 0049</p>
           <h3 class="nombre-pokemon">Venomoth</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Venomoth Pokemon Vertical Wallpaper.jpg" alt="Venomoth" />
+            <img
+              src="img/pokedex/Venomoth Pokemon Vertical Wallpaper.jpg"
+              alt="Venomoth"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -892,7 +947,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -905,7 +960,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -918,7 +973,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -936,9 +991,11 @@
           </div>
         </div>
 
+
+        
         <div class="cuadrado">
           <p class="numero-pokemon">N.° 0067</p>
-          <h3 class="nombre-pokemon">Poliwag</h3>
+          <h3 class="nombre-pokemon">Machoke</h3>
           <div class="contenedor-imagen">
             <img src="img/pokedex/machoke.jpg" alt="mahcoke" />
           </div>
@@ -1036,7 +1093,10 @@
           <p class="numero-pokemon">N.° 0074</p>
           <h3 class="nombre-pokemon">Geodude</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Geodude Pokemon Vertical Wallpaper.jpg" alt="geodude" />
+            <img
+              src="img/pokedex/Geodude Pokemon Vertical Wallpaper.jpg"
+              alt="geodude"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1050,7 +1110,10 @@
           <p class="numero-pokemon">N.° 0075</p>
           <h3 class="nombre-pokemon">Graveler</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Graveler Pokemon Vertical Wallpaper.jpg" alt="graveler" />
+            <img
+              src="img/pokedex/Graveler Pokemon Vertical Wallpaper.jpg"
+              alt="graveler"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1078,7 +1141,10 @@
           <p class="numero-pokemon">N.° 0077</p>
           <h3 class="nombre-pokemon">Ponyta</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Ponyta Pokemon Vertical Wallpaper.jpg" alt="ponyta" />
+            <img
+              src="img/pokedex/Ponyta Pokemon Vertical Wallpaper.jpg"
+              alt="ponyta"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1109,7 +1175,7 @@
           <div class="texto">
             <div class="tipos">
               <span class="tipo tipo-agua">Agua</span>
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1123,7 +1189,7 @@
           <div class="texto">
             <div class="tipos">
               <span class="tipo tipo-agua">Agua</span>
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1146,7 +1212,7 @@
           <p class="numero-pokemon">N.° 0082</p>
           <h3 class="nombre-pokemon">Magneton</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/magneton.jpg" alt="magneton" />
+            <img src="img/pokedex/magneton2.jpg" alt="magneton" />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1255,7 +1321,10 @@
           <p class="numero-pokemon">N.° 0090</p>
           <h3 class="nombre-pokemon">Shellder</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Shellder Pokemon Vertical Wallpaper.jpg" alt="shellder" />
+            <img
+              src="img/pokedex/Shellder Pokemon Vertical Wallpaper.jpg"
+              alt="shellder"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1282,7 +1351,10 @@
           <p class="numero-pokemon">N.° 0092</p>
           <h3 class="nombre-pokemon">Gastly</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Gastly Pokemon Vertical Wallpaper.jpg" alt="gaslty" />
+            <img
+              src="img/pokedex/Gastly Pokemon Vertical Wallpaper.jpg"
+              alt="gaslty"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1296,7 +1368,10 @@
           <p class="numero-pokemon">N.° 0093</p>
           <h3 class="nombre-pokemon">Haunter</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Haunter Halloween Ghost Pokemon Vertical Wallpaper.jpg" alt="haunter" />
+            <img
+              src="img/pokedex/Haunter Halloween Ghost Pokemon Vertical Wallpaper.jpg"
+              alt="haunter"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1342,7 +1417,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1355,7 +1430,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1416,12 +1491,15 @@
           <p class="numero-pokemon">N.° 0102</p>
           <h3 class="nombre-pokemon">Exeggcute</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Exeggcute Art work from Celestial Guardians_ Lunala.jpg" alt="exeggcute" />
+            <img
+              src="img/pokedex/Exeggcute Art work from Celestial Guardians_ Lunala.jpg"
+              alt="exeggcute"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
               <span class="tipo tipo-planta">Planta</span>
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1435,7 +1513,7 @@
           <div class="texto">
             <div class="tipos">
               <span class="tipo tipo-planta">Planta</span>
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1457,7 +1535,10 @@
           <p class="numero-pokemon">N.° 0105</p>
           <h3 class="nombre-pokemon">Marowak</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Marowak Pokemon Vertical Wallpaper.jpg" alt="marowak" />
+            <img
+              src="img/pokedex/Marowak Pokemon Vertical Wallpaper.jpg"
+              alt="marowak"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1470,7 +1551,10 @@
           <p class="numero-pokemon">N.° 0106</p>
           <h3 class="nombre-pokemon">Hitmonlee</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Hitmonlee Gym Session Pokemon Vertical Wallpaper.jpg" alt="hitmonlee" />
+            <img
+              src="img/pokedex/Hitmonlee Gym Session Pokemon Vertical Wallpaper.jpg"
+              alt="hitmonlee"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1483,7 +1567,10 @@
           <p class="numero-pokemon">N.° 0107</p>
           <h3 class="nombre-pokemon">Hitmonchan</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Hitmonchan Gym Session Pokemon Vertical Wallpaper.jpg" alt="hitmonchan" />
+            <img
+              src="img/pokedex/Hitmonchan Gym Session Pokemon Vertical Wallpaper.jpg"
+              alt="hitmonchan"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1535,7 +1622,10 @@
           <p class="numero-pokemon">N.° 0111</p>
           <h3 class="nombre-pokemon">Rhyhorn</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Rhyhorn Pokemon Vertical Wallpaper.jpg" alt="rhyhorn" />
+            <img
+              src="img/pokedex/Rhyhorn Pokemon Vertical Wallpaper.jpg"
+              alt="rhyhorn"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1628,7 +1718,10 @@
           <p class="numero-pokemon">N.° 0118</p>
           <h3 class="nombre-pokemon">Goldeen</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Goldeen Pokemon Vertical Wallpaper.jpg" alt="goldeen" />
+            <img
+              src="img/pokedex/Goldeen Pokemon Vertical Wallpaper.jpg"
+              alt="goldeen"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1678,13 +1771,16 @@
 
         <div class="cuadrado">
           <p class="numero-pokemon">N.° 0122</p>
-          <h3 class="nombre-pokemon">Mr. Mime </h3>
+          <h3 class="nombre-pokemon">Mr. Mime</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Mr_ Mime Pokemon Vertical Wallpaper.jpg" alt="Mr mime" />
+            <img
+              src="img/pokedex/Mr_ Mime Pokemon Vertical Wallpaper.jpg"
+              alt="Mr mime"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
               <span class="tipo tipo-hada">Hada</span>
             </div>
           </div>
@@ -1713,7 +1809,7 @@
           <div class="texto">
             <div class="tipos">
               <span class="tipo tipo-hielo">Hielo</span>
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -1814,7 +1910,10 @@
           <p class="numero-pokemon">N.° 0132</p>
           <h3 class="nombre-pokemon">Ditto</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Ditto Shapeshifting Pokemon Vertical Wallpaper.jpg" alt="ditto" />
+            <img
+              src="img/pokedex/Ditto Shapeshifting Pokemon Vertical Wallpaper.jpg"
+              alt="ditto"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -1948,7 +2047,10 @@
           <p class="numero-pokemon">N.° 0142</p>
           <h3 class="nombre-pokemon">Aerodactyl</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Aerodactyl Pokemon Vertical Wallpaper.jpg" alt="aerodactyl" />
+            <img
+              src="img/pokedex/Aerodactyl Pokemon Vertical Wallpaper.jpg"
+              alt="aerodactyl"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -2017,7 +2119,10 @@
           <p class="numero-pokemon">N.° 0147</p>
           <h3 class="nombre-pokemon">Dratini</h3>
           <div class="contenedor-imagen">
-            <img src="img/pokedex/Dratini Pokemon Vertical Wallpaper.jpg" alt="dratini" />
+            <img
+              src="img/pokedex/Dratini Pokemon Vertical Wallpaper.jpg"
+              alt="dratini"
+            />
           </div>
           <div class="texto">
             <div class="tipos">
@@ -2061,7 +2166,7 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
@@ -2074,15 +2179,2496 @@
           </div>
           <div class="texto">
             <div class="tipos">
-              <span class="tipo tipo-psiquico">Psíquico</span>
+              <span class="tipo tipo-psíquico">Psíquico</span>
             </div>
           </div>
         </div>
-
-        
-        
-        
       </div>
     </div>
   </body>
+
+  <div id="modalPokemon" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar-modal">&times;</span>
+      <div class="modal-header">
+        <h2 id="modalNombrePokemon">Bulbasaur</h2>
+        <p id="modalNumeroPokemon">N.° 0001</p>
+      </div>
+      <div class="modal-body">
+        <div class="modal-imagen">
+          <img
+            id="modalImagenPokemon"
+            src="img/pokedex/bulbasaur.jpg"
+            alt="bulbasaur"
+          />
+        </div>
+        <div class="modal-info">
+          <div class="info-section">
+            <h3>Descripción</h3>
+            <p id="modalDescripcion">
+              Para protegerse, despide un hedor horrible por las antenas con el
+              que repele a sus enemigos.
+            </p>
+          </div>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-label">Altura</span>
+              <span class="info-value" id="modalAltura">0.7 m</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Peso</span>
+              <span class="info-value" id="modalPeso">6.9 kg</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Género</span>
+              <span class="info-value" id="modalGenero">♂ ♀</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Categoría</span>
+              <span class="info-value" id="modalCategoria">Semilla</span>
+            </div>
+            <div class="info-item info-item-habilidad">
+              <span class="info-label">Habilidad</span>
+              <span class="info-value" id="modalHabilidad">Espesura</span>
+              <p class="habilidad-descripcion" id="modalHabilidadDescripcion">
+                Aumenta el poder de movimientos de tipo Planta cuando el Pokémon
+                tiene pocos PS.
+              </p>
+            </div>
+          </div>
+          <div class="info-types">
+            <h3>Tipo</h3>
+            <div id="modalTipos" class="tipos"></div>
+          </div>
+          <div class="info-weakness">
+            <h3>Debilidad</h3>
+            <div id="modalDebilidades" class="tipos"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript-->
+
+  <script>
+    // Datos de los Pokémon (puedes expandir esto)
+    const pokemonData = {
+      1: {
+        nombre: "Bulbasaur",
+        numero: "0001",
+        descripcion:"Una rara semilla fue plantada en su espalda al nacer. La planta brota y crece con este Pokémon.",
+        altura: "0.7 m",
+        peso: "6.9 kg",
+        genero: "♂ ♀",
+        categoria: "Semilla",
+        habilidad: "Espesura",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Planta cuando le quedan pocos PS.",
+        imagen: "img/pokedex/bulbasaur.jpg",
+        tipos: ["planta", "veneno"],
+        debilidades: ["fuego", "volador", "hielo", "psíquico"],
+      },
+      2: {
+        nombre: "Ivysaur",
+        numero: "0002",
+        descripcion:"Cuando le crece bastante el bulbo del lomo, pierde la capacidad de ponerse de pie sobre sus patas traseras.",
+        altura: "1.0 m",
+        peso: "13.0 kg",
+        genero: "♂ ♀",
+        categoria: "Semilla",
+        habilidad: "Espesura",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Planta cuando le quedan pocos PS.",
+        imagen: "img/pokedex/ivysaur.jpg",
+        tipos: ["planta", "veneno"],
+        debilidades: ["fuego", "volador", "hielo", "psíquico"],
+      },
+      3: {
+        nombre: "Venusaur",
+        numero: "0003",
+        descripcion:"La planta florece cuando absorbe energía solar, lo que lo lleva a moverse en busca de la luz solar.",
+        altura: "2.0 m",
+        peso: "100.0 kg",
+        genero: "♂ ♀",
+        categoria: "Semilla",
+        habilidad: "Espesura",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Planta cuando le quedan pocos PS.",
+        imagen: "img/pokedex/Venusaur.jpg",
+        tipos: ["planta", "veneno"],
+        debilidades: ["fuego", "volador", "hielo", "psíquico"],
+      },
+      4: {
+        nombre: "Charmander",
+        numero: "0004",
+        descripcion:"La llama de su cola indica su estado de ánimo. Si está alegre, la llama arde más fuerte.",
+        altura: "0.6 m",
+        peso: "8.5 kg",
+        genero: "♂ ♀",
+        categoria: "Lagartija",
+        habilidad: "Mar llamas",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Fuego cuando le quedan pocos PS.",
+        imagen: "img/pokedex/Charmander.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua", "tierra", "roca"],
+      },
+      5: {
+        nombre: "Charmeleon",
+        numero: "0005",
+        descripcion: "Al agitar su ardiente cola, eleva poco a poco la temperatura a su alrededor para sofocar a sus rivales.",
+        altura: "1.1 m",
+        peso: "19.0 kg",
+        genero: "♂ ♀",
+        categoria: "Llama",
+        habilidad: "Mar llamas",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Fuego cuando le quedan pocos PS.",
+        imagen: "img/pokedex/charmeleon.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua", "tierra", "roca"],
+      },
+      6: {
+        nombre: "Charizard",
+        numero: "0006",
+        descripcion: "Cuando se enfurece de verdad, la llama de la punta de su cola se vuelve de color azul claro.",
+        altura: "1.7 m",
+        peso: "90.5 kg",
+        genero: "♂ ♀",
+        categoria: "Llama",
+        habilidad: "Mar Llamas",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Fuego cuando le quedan pocos PS.",
+        imagen: "img/pokedex/charizard.jpg",
+        tipos: ["fuego", "volador"],
+        debilidades: ["agua", "electrico", "roca"],
+      },
+      7: {
+        nombre: "Squirtle",
+        numero: "0007",
+        descripcion: "Tras nacer, se le hincha el lomo y se le forma un caparazón. Escupe poderosa espuma por la boca.",
+        altura: "0.5 m",
+        peso: "9.0 kg ",
+        genero: "♂ ♀",
+        categoria: "Tortuguita",
+        habilidad: "Torrente",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Agua cuando le quedan pocos PS.",
+        imagen: "img/pokedex/squirtle.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta", "electrico"],
+      },
+      8: {
+        nombre: "Wartortle",
+        numero: "0008",
+        descripcion: "Tiene una cola larga y peluda que simboliza la longevidad y lo hace popular entre los mayores.",
+        altura: "1.0 m",
+        peso: "22.5 kg",
+        genero: "♂ ♀",
+        categoria: "Tortuga",
+        habilidad: "Torrente",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Agua cuando le quedan pocos PS.",
+        imagen: "img/pokedex/wartortle.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta", "electrico"],
+      },
+      9: {
+        nombre: "Blastoise",
+        numero: "0009",
+        descripcion: "Aumenta de peso deliberadamente para contrarrestar la fuerza de los chorros de agua que dispara.",
+        altura: "1.6 m",
+        peso: "85.5 kg",
+        genero: "♂ ♀",
+        categoria: "Armazón",
+        habilidad: "Torrente",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Agua cuando le quedan pocos PS.",
+        imagen: "img/pokedex/blastoise.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta", "electrico"],
+      },
+      10: {
+        nombre: "Caterpie",
+        numero: "0010",
+        descripcion:"Para protegerse, despide un hedor horrible por las antenas con el que repele a sus enemigos.",
+        altura: "0.3 m",
+        peso: "2.9 kg",
+        genero: "♂ ♀",
+        categoria: "Gusano",
+        habilidad: "Polvo Escudo",
+        habilidadDescripcion:"El polvo de escamas que lo envuelve lo protege de los efectos secundarios de los ataques recibidos.",
+        imagen: "img/pokedex/caterpie.jpg",
+        tipos: ["bicho"],
+        debilidades: ["fuego", "volador", "roca"],
+      },
+      11: {
+        nombre: "Metapod",
+        numero: "0011",
+        descripcion:"Como en este estado solo puede endurecer su coraza, permanece inmóvil a la espera de evolucionar.",
+        altura: "0.7 m",
+        peso: "9.9 kg",
+        genero: "♂ ♀",
+        categoria: "Capullo",
+        habilidad: "Mudar",
+        habilidadDescripcion: "Puede curar sus problemas de estado al mudar la piel.",
+        imagen: "img/pokedex/metapod.jpg",
+        tipos: ["bicho"],
+        debilidades: ["fuego", "volador", "roca"],
+      },
+      12: {
+        nombre: "Butterfree",
+        numero: "0012",
+        descripcion:"Adora el néctar de las flores. Una pequeña cantidad de polen le basta para localizar prados floridos.",
+        altura: "1.1 m",
+        peso: "32.0 kg",
+        genero: "♂ ♀",
+        categoria: "Mariposa",
+        habilidad: "Ojo Compuesto",
+        habilidadDescripcion: "Aumenta la precisión de sus movimientos.",
+        imagen: "img/pokedex/butterfree.jpg",
+        tipos: ["bicho", "volador"],
+        debilidades: ["fuego", "volador", "roca","electrico", "hielo"],
+      },
+      13: {
+        nombre: "Weedle",
+        numero: "0013",
+        descripcion:"El aguijón de la cabeza es muy puntiagudo. Se alimenta de hojas oculto en la espesura de bosques y praderas.",
+        altura: "0.3 m",
+        peso: "3.2 kg",
+        genero: "♂ ♀",
+        categoria: "Oruga",
+        habilidad: "Polvo Escudo",
+        habilidadDescripcion:"El polvo de escamas que lo envuelve lo protege de los efectos secundarios de los ataques recibidos.",
+        imagen: "img/pokedex/weedle.jpg",
+        tipos: ["bicho", "veneno"],
+        debilidades: ["fuego", "volador", "roca", "psíquico"],
+      },
+      14: {
+        nombre: "Kakuna",
+        numero: "0014",
+        descripcion:"Aunque es casi incapaz de moverse, en caso de sentirse amenazado puede envenenar a los enemigos con su aguijón.",
+        altura: "0.6 m",
+        peso: "10.0 kg",
+        genero: "♂ ♀",
+        categoria: "Capullo",
+        habilidad: "Mudar",
+        habilidadDescripcion:"Puede curar sus problemas de estado al mudar la piel.",
+        imagen: "img/pokedex/kakuna.jpg",
+        tipos: ["bicho", "veneno"],
+        debilidades: ["fuego", "volador", "roca", "psíquico"],
+      },
+      15: {
+        nombre: "Beedrill",
+        numero: "0015",
+        descripcion:"Tiene tres aguijones venenosos, dos en las patas anteriores y uno en la parte baja del abdomen, con los que ataca a sus enemigos una y otra vez.",
+        altura: "1.0 m",
+        peso: "29.5 kg",
+        genero: "♂ ♀",
+        categoria: "Abeja veneno",
+        habilidad: "Enjambre",
+        habilidadDescripcion:"Potencia sus movimientos de tipo Bicho cuando le quedan pocos PS.",
+        imagen: "img/pokedex/beedrill.jpg",
+        tipos: ["bicho","veneno"],
+        debilidades: ["fuego", "volador", "roca","psíquico"],
+      },
+      16: {
+        nombre: "Pidgey",
+        numero: "0016",
+        descripcion:"Su docilidad es tal que suelen defenderse levantando arena en lugar de contraatacar.",
+        altura: "0.3 m",
+        peso: "1.8 kg",
+        genero: "♂ ♀",
+        categoria: "Pajarito",
+        habilidad: "Vista lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/pidgey.jpg",
+        tipos: ["normal", "volador"],
+        debilidades: ["electrico", "hielo", "roca"],
+      },
+      17: {
+        nombre: "Pidgeotto",
+        numero: "0017",
+        descripcion:"Su extraordinaria vitalidad y resistencia le permiten cubrir grandes distancias del territorio que habita en busca de presas.",
+        altura: "1.1 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pájaro",
+        habilidad: "Vista lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/pidgeotto.jpg",
+        tipos: ["normal", "volador"],
+        debilidades: ["electrico", "hielo", "roca"],
+      },
+      18: {
+        nombre: "Pidgeot",
+        numero: "0018",
+        descripcion:"Este Pokémon vuela a una velocidad de 2 mach en busca de presas. Sus grandes garras son armas muy peligrosas.",
+        altura: "1.5 m",
+        peso: "39.5 kg",
+        genero: "♂ ♀",
+        categoria: "Pájaro",
+        habilidad: "Vista lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/Pidgeot - Ace.jpg",
+        tipos: ["normal", "volador"],
+        debilidades: ["electrico", "hielo", "roca"],
+      },
+      19: {
+        nombre: "Rattata",
+        numero: "0019",
+        descripcion:"Es propenso a hincar los incisivos en cualquier cosa que se le ponga por delante. Si se ve alguno, seguramente haya cuarenta cerca.",
+        altura: "0.3 m",
+        peso: "3.5 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Fuga",
+        habilidadDescripcion: "Puede escapar de cualquier Pokémon salvaje.",
+        imagen: "img/pokedex/ratata.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      20: {
+        nombre: "Raticate",
+        numero: "0020",
+        descripcion:"Gracias a las pequeñas membranas de las patas traseras, puede nadar por los ríos para capturar presas.",
+        altura: "0.7 m",
+        peso: "18.5 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Agallas",
+        habilidadDescripcion: "Si sufre un problema de estado, se arma de valor y aumenta su Ataque.",
+        imagen: "img/pokedex/raticate.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      21: {
+        nombre: "Spearow",
+        numero: "0021",
+        descripcion:"A la hora de proteger su territorio, compensa su incapacidad para volar a gran altura con una increíble velocidad.",
+        altura: "0.3 m",
+        peso: "2.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pajarito",
+        habilidad: "Vista lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/spearow.jpg",
+        tipos: ["normal", "volador"],
+        debilidades: ["electrico", "hielo", "roca"],
+      },
+      22: {
+        nombre: "Fearow",
+        numero: "0022",
+        descripcion:"Este Pokémon ha existido desde tiempos remotos. Al menor atisbo de peligro, alza el vuelo y huye.",
+        altura: "1.2 m",
+        peso: "38.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pico",
+        habilidad: "Vista lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/fearow.jpg",
+        tipos: ["normal", "volador"],
+        debilidades: ["electrico", "hielo", "roca"],
+      },
+      23: {
+        nombre: "Ekans",
+        numero: "0023",
+        descripcion:"Puede desencajar la mandíbula libremente para engullir grandes presas, aunque esto le dificulte el movimiento por pesar demasiado.",
+        altura: "2.0 m",
+        peso: "6.9 kg",
+        genero: "♂ ♀",
+        categoria: "Serpiente",
+        habilidad: "Intimidación",
+        habilidadDescripcion:"Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/ekans.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra", "psíquico"],
+      },
+      24: {
+        nombre: "Arbok",
+        numero: "0024",
+        descripcion:"El dibujo que tiene en el vientre parece una cara terrorífica. Los rivales más débiles salen huyendo nada más verlo.",
+        altura: "3.5 m",
+        peso: "65.0 kg",
+        genero: "♂ ♀",
+        categoria: "Cobra",
+        habilidad: "Intimidación",
+        habilidadDescripcion: "Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/Arbok, eggs, nest; Pokémon.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra", "psíquico"],
+      },
+      25: {
+        nombre: "Pikachu",
+        numero: "0025",
+        descripcion:"Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas.",
+        altura: "0.4 m",
+        peso: "6.0 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Electricidad Estática",
+        habilidadDescripcion: "La electricidad estática que lo envuelve puede paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Pikachu in the sunshine.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+      26: {
+        nombre: "Raichu",
+        numero: "0026",
+        descripcion:"A la hora de proteger su territorio, compensa su incapacidad para volar a gran altura con una increíble velocidad.",
+        altura: "0.8 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Electricidad Estática",
+        habilidadDescripcion: "La electricidad estática que lo envuelve puede paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/raichu.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+      27: {
+        nombre: "Sandshrew",
+        numero: "0027",
+        descripcion:"Excava madrigueras profundas en las que vive. Cuando lo ataca algún enemigo, se hace una bola y aguanta pacientemente sus embates.",
+        altura: "0.6 m",
+        peso: "12.0 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Velo Arena",
+        habilidadDescripcion: "Aumenta su Evasión durante las tormentas de arena.",
+        imagen: "img/pokedex/sandshrew.jpg",
+        tipos: ["tierra"],
+        debilidades: ["agua","planta","hielo"],
+      },
+      28: {
+        nombre: "Sandslash",
+        numero: "0028",
+        descripcion:"Corre de un lado a otro a toda velocidad al tiempo que ataca hábilmente con las púas que tiene en la espalda y con sus afiladas garras.",
+        altura: "1.0 m",
+        peso: "29.5 kg",
+        genero: "♂ ♀",
+        categoria: "Ratón",
+        habilidad: "Velo Arena",
+        habilidadDescripcion: "Aumenta su Evasión durante las tormentas de arena.",
+        imagen: "img/pokedex/sandslash.jpg",
+        tipos: ["tierra"],
+        debilidades: ["agua","planta","hielo"],
+      },
+      29: {
+        nombre: "Nidoran ♀",
+        numero: "0029",
+        descripcion:"Posee un olfato más fino que los Nidoran♂. Usa los bigotes para percibir la dirección del viento y buscar comida a sotavento de sus depredadores.",
+        altura: "0.4 m",
+        peso: "7.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pin Veneno",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Nidoran Female Pokemon Vertical Wallpaper.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+      30: {
+        nombre: "Nidorina",
+        numero: "0030",
+        descripcion:"Se cree que el cuerno de la frente se le ha atrofiado para evitar herir a sus crías al alimentarlas.",
+        altura: "0.8 m",
+        peso: "20.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pin Veneno",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/nidorina.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra", "psíquico"],
+      },
+      31: {
+        nombre: "Nidoqueen",
+        numero: "0031",
+        descripcion:"Su defensa destaca sobre la capacidad ofensiva. Usa las escamas del cuerpo como una coraza para proteger a su prole de cualquier ataque.",
+        altura: "1.3 m",
+        peso: "60.0 kg",
+        genero: "♂ ♀",
+        categoria: "Taladro",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Nidoqueen & Nidorino & Nidoran.jpg",
+        tipos: ["veneno", "tierra"],
+        debilidades: ["agua","hielo","tierra","psíquico"],
+      },
+      32: {
+        nombre: "Nidoran ♂",
+        numero: "0032",
+        descripcion:"Mantiene sus grandes orejas levantadas, siempre alerta. Si advierte peligro, ataca inoculando una potente toxina con su cuerno frontal.",
+        altura: "0.5 m",
+        peso: "9.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pin Veneno",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Nidoran male.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+      33: {
+        nombre: "Nidorino",
+        numero: "0033",
+        descripcion:"Donde quiera que va, parte rocas con su cuerno, más duro que un diamante, en busca de una Piedra Lunar.",
+        altura: "0.9 m",
+        peso: "19.5 kg",
+        genero: "♂ ♀",
+        categoria: "Pin Veneno",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Nidorino Pokemon Vertical Wallpaper.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+      34: {
+        nombre: "Nidoking",
+        numero: "0034",
+        descripcion:"A la hora de proteger su territorio, compensa su incapacidad para volar a gran altura con una increíble velocidad.",
+        altura: "1.4 m",
+        peso: "62.0 kg",
+        genero: "♂ ♀",
+        categoria: "Taladro",
+        habilidad: "Punto Tóxico",
+        habilidadDescripcion: "Puede envenenar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/nidoking.jpg",
+        tipos: ["veneno","tierra"],
+        debilidades: ["agua","hielo","tierra","psíquico"],
+      },
+      35: {
+        nombre: "Clefairy",
+        numero: "0035",
+        descripcion:"En las noches de luna llena, Clefairy de diversos lugares se reúnen para bailar bajo su luz, la cual los hace flotar.",
+        altura: "0.6 m",
+        peso: "7.5 kg",
+        genero: "♂ ♀",
+        categoria: "Hada",
+        habilidad: "Gran Encanto ",
+        habilidadDescripcion: "Puede causar enamoramiento al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/clefairy.jpg",
+        tipos: ["hada"],
+        debilidades: ["veneno","acero"],
+      },
+      36: {
+        nombre: "Clefable",
+        numero: "0036",
+        descripcion:"Este Pokémon de aspecto feérico, raramente visto por los humanos, corre a esconderse en cuanto detecta que hay alguien cerca.",
+        altura: "1.3 m",
+        peso: "40.0 kg",
+        genero: "♂ ♀",
+        categoria: "Hada",
+        habilidad: "Gran Encanto",
+        habilidadDescripcion: "Puede causar enamoramiento al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/clefable.jpg",
+        tipos: ["hada"],
+        debilidades: ["veneno","acero"],
+      },
+      37: {
+        nombre: "Vulpix",
+        numero: "0037",
+        descripcion:"Si lo ataca un enemigo más fuerte que él, finge estar herido para confundirlo y huir en cuanto baja la guardia.",
+        altura: "0.6 m",
+        peso: "9.9 kg",
+        genero: "♂ ♀",
+        categoria: "Zorro",
+        habilidad: "Absorbe Fuego",
+        habilidadDescripcion: "Si lo alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo.",
+        imagen: "img/pokedex/vulpix.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","tierra","roca"],
+      },
+      38: {
+        nombre: "Ninetales",
+        numero: "0038",
+        descripcion:"Cuentan algunas leyendas que cada una de sus nueve colas posee su propio y único poder sobrenatural.",
+        altura: "1.1 m",
+        peso: "19.9 kg",
+        genero: "♂ ♀",
+        categoria: "Zorro",
+        habilidad: "Absorbe Fuego",
+        habilidadDescripcion: "Si lo alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo.",
+        imagen: "img/pokedex/ninetales.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","tierra","roca"],
+      },
+      39: {
+        nombre: "Jigglypuff",
+        numero: "0039",
+        descripcion:"Cuando le tiemblan sus redondos y adorables ojos, entona una melodía agradable y misteriosa con la que duerme a sus enemigos.",
+        altura: "0.5 m",
+        peso: "5.5 kg",
+        genero: "♂ ♀",
+        categoria: "Globo",
+        habilidad: "Gran Encanto",
+        habilidadDescripcion: "Puede causar enamoramiento al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/jigglypuff.jpg",
+        tipos: ["normal","hada"],
+        debilidades: ["veneno","acero"],
+      },
+      40: {
+        nombre: "Wigglytuff",
+        numero: "0040",
+        descripcion:"Tiene un pelaje muy fino. Se recomienda no enfadarlo, o se inflará y golpeará con todo su cuerpo.",
+        altura: "1.0 m",
+        peso: "12.0 kg",
+        genero: "♂ ♀",
+        categoria: "Globo",
+        habilidad: "Gran Encanto",
+        habilidadDescripcion: "Puede causar enamoramiento al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Wigglytuff Female Pokemon Vertical Wallpaper.jpg",
+        tipos: ["normal","hada"],
+        debilidades: ["veneno","acero"],
+      },
+      41: {
+        nombre: "Zubat",
+        numero: "0041",
+        descripcion:"Emite ondas ultrasónicas por la boca para escrutar el entorno, lo que le permite volar con pericia por cuevas angostas.",
+        altura: "0.8 m",
+        peso: "7.5 kg",
+        genero: "♂ ♀",
+        categoria: "Murciélago",
+        habilidad: "Fuerza Mental",
+        habilidadDescripcion: "Gracias a su profunda concentración, no se amedrenta ante los ataques de otros Pokémon ni sufre los efectos de Intimidación.",
+        imagen: "img/pokedex/zubat.jpg",
+        tipos: ["veneno","volador"],
+        debilidades: ["electrico","hielo","psíquico","roca"],
+      },
+      42: {
+        nombre: "Golbat",
+        numero: "0042",
+        descripcion:"Le encanta chuparles la sangre a los seres vivos. En ocasiones comparte la preciada colecta con otros congéneres hambrientos.",
+        altura: "1.6 m",
+        peso: "55.0 kg",
+        genero: "♂ ♀",
+        categoria: "Murciélago",
+        habilidad: "Fuerza Mental",
+        habilidadDescripcion: "Gracias a su profunda concentración, no se amedrenta ante los ataques de otros Pokémon ni sufre los efectos de Intimidación.",
+        imagen: "img/pokedex/golbat.jpg",
+        tipos: ["veneno","volador"],
+        debilidades: ["electrico","hielo","psíquico","roca"],
+      },
+      43: {
+        nombre: "Oddish",
+        numero: "0043",
+        descripcion:"Su nombre científico es Oddium viandantis. Se dice que, cuando cae la noche, puede llegar a desplazarse hasta 300 m con sus dos raíces.",
+        altura: "0.5 m",
+        peso: "5.4 kg",
+        genero: "♂ ♀",
+        categoria: "Hierbajo",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol",
+        imagen: "img/pokedex/ODDISH WAKE UP, Emi Montagna.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","hielo","volador","psíquico"],
+      },
+      44: {
+        nombre: "Gloom",
+        numero: "0044",
+        descripcion:"El fluido que le cae lentamente de la boca no es saliva, sino una especie de néctar que utiliza para atraer a sus presas.",
+        altura: "0.8 m",
+        peso: "8.6 kg",
+        genero: "♂ ♀",
+        categoria: "Hierbajo",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/gloom.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","hielo","volador","psíquico"],
+      },
+      45: {
+        nombre: "Vileplume",
+        numero: "0045",
+        descripcion:"El capullo florece de golpe con un chasquido, tras lo cual comienza a desprender un polen alergénico y venenoso.",
+        altura: "1.2 m",
+        peso: "18.6 kg",
+        genero: "♂ ♀",
+        categoria: "Flor",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/vileplume.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","hielo","volador","psíquico"],
+      },
+      46: {
+        nombre: "Paras",
+        numero: "0046",
+        descripcion:"Escarba en el suelo para extraer nutrientes de las raíces de los árboles, que las setas del lomo absorben después casi por completo.",
+        altura: "0.3 m",
+        peso: "5.4 kg",
+        genero: "♂ ♀",
+        categoria: "Hongo",
+        habilidad: "Efecto Espora",
+        habilidadDescripcion: "Puede dormir, envenenar o paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/paras.jpg",
+        tipos: ["bicho","planta"],
+        debilidades: ["fuego","hielo","veneno","volador","bicho","roca"],
+      },
+      47: {
+        nombre: "Parasect",
+        numero: "0047",
+        descripcion:"Tras largo tiempo absorbiendo la energía del huésped, la seta parásita del lomo es la que parece controlar la voluntad de este Pokémon.",
+        altura: "1.0 m",
+        peso: "29.5 kg",
+        genero: "♂ ♀",
+        categoria: "Hongo",
+        habilidad: "Efecto Espora",
+        habilidadDescripcion: "Puede dormir, envenenar o paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/parasect.jpg",
+        tipos: ["bicho","planta"],
+        debilidades: ["fuego","hielo","veneno","volador","bicho","roca"],
+      },
+      48: {
+        nombre: "Venonat",
+        numero: "0048",
+        descripcion:"A la hora de proteger su territorio, compensa su incapacidad para volar a gran altura con una increíble velocidad.",
+        altura: "1.0 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Insecto",
+        habilidad: "Ojo Compuesto",
+        habilidadDescripcion: "Aumenta la precisión de sus movimientos.",
+        imagen: "img/pokedex/venonat.jpg",
+        tipos: ["bicho","veneno"],
+        debilidades: ["fuego","volador","psíquico","roca"],
+      },
+      49: {
+        nombre: "Venomoth",
+        numero: "0049",
+        descripcion:"Tiene las alas cubiertas de escamas. Cada vez que las bate, esparce un polvillo sumamente venenoso.",
+        altura: "1.5 m",
+        peso: "12.5 kg",
+        genero: "♂ ♀",
+        categoria: "Polilla Venenosa",
+        habilidad: "Polvo Escudo",
+        habilidadDescripcion: "El polvo de escamas que lo envuelve lo protege de los efectos secundarios de los ataques recibidos.",
+        imagen: "img/pokedex/Venomoth Pokemon Vertical Wallpaper.jpg",
+        tipos: ["bicho","veneno"],
+        debilidades: ["fuego","volador","psíquico","roca"],
+      },
+      50: {
+        nombre: "Diglett",
+        numero: "0050",
+        descripcion:"Vive 1 m por debajo del suelo, donde se alimenta de raíces. A veces también aparece en la superficie.",
+        altura: "0.2 m",
+        peso: "0.8 kg",
+        genero: "♂ ♀",
+        categoria: "Topo",
+        habilidad: "Trampa Arena",
+        habilidadDescripcion: "Evita que el rival huya o sea cambiado por otro.",
+        imagen: "img/pokedex/diglett.jpg",
+        tipos: ["tierra"],
+        debilidades: ["planta","agua","hielo"],
+      },
+      51: {
+        nombre: "Dugtrio",
+        numero: "0051",
+        descripcion:"Sus tres cabezas suben y bajan para remover la tierra cercana y facilitar así la excavación.",
+        altura: "0.7 m",
+        peso: "33.3 kg",
+        genero: "♂ ♀",
+        categoria: "Topo",
+        habilidad: "Trampa Arena",
+        habilidadDescripcion: "Evita que el rival huya o sea cambiado por otro.",
+        imagen: "img/pokedex/dugtrio.jpg",
+        tipos: ["tierra"],
+        debilidades: ["planta","agua","hielo"],
+      },
+      52: {
+        nombre: "Meowth",
+        numero: "0052",
+        descripcion:"Durante el día, se dedica a dormir. De noche, vigila su territorio con un brillo en los ojos.",
+        altura: "0.4 m",
+        peso: "4.2 kg",
+        genero: "♂ ♀",
+        categoria: "Gato Araña",
+        habilidad: "Recogida",
+        habilidadDescripcion: "Puede recoger objetos que otros Pokémon hayan usado, o bien aquellos que encuentre en plena aventura.",
+        imagen: "img/pokedex/meowth.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      53: {
+        nombre: "Persian",
+        numero: "0053",
+        descripcion:"Aunque es muy admirado por el pelaje, es difícil de entrenar como mascota porque enseguida suelta arañazos.",
+        altura: "1.0 m",
+        peso: "32.0 kg",
+        genero: "♂ ♀",
+        categoria: "Gato Fino",
+        habilidad: "Flexibilidad",
+        habilidadDescripcion: "Evita ser paralizado gracias a la flexibilidad de su cuerpo.",
+        imagen: "img/pokedex/persian.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      54: {
+        nombre: "Psyduck",
+        numero: "0054.",
+        descripcion:"Padece continuamente dolores de cabeza. Cuando son muy fuertes, empieza a usar misteriosos poderes.",
+        altura: "0.8 m",
+        peso: "19.6 kg",
+        genero: "♂ ♀",
+        categoria: "Pato",
+        habilidad: "Aclimatación",
+        habilidadDescripcion: "Anula todos los efectos del tiempo atmosférico.",
+        imagen: "img/pokedex/psyduck2.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      55: {
+        nombre: "Golduck",
+        numero: "0055",
+        descripcion:"Cuando nada a toda velocidad usando sus largas extremidades palmeadas, su frente comienza a brillar.",
+        altura: "1.7 m",
+        peso: "76.6 kg",
+        genero: "♂ ♀",
+        categoria: "Pato",
+        habilidad: "Aclimatación",
+        habilidadDescripcion: "Anula todos los efectos del tiempo atmosférico.",
+        imagen: "img/pokedex/golduck con psyducks.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      56: {
+        nombre: "Mankey",
+        numero: "0056",
+        descripcion:"Vive en grupos en las copas de los árboles. Si pierde de vista a su manada, se siente solo y se enfada.",
+        altura: "0.5 m",
+        peso: "28.0 kg",
+        genero: "♂ ♀",
+        categoria: "Mono Cerdo",
+        habilidad: "Espíritu Vital",
+        habilidadDescripcion: "Su determinación le impide quedarse dormido",
+        imagen: "img/pokedex/mankey.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+      57: {
+        nombre: "Primeape",
+        numero: "0057",
+        descripcion:"Se pone furioso si nota que alguien lo está mirando. Persigue a cualquiera que establezca contacto visual con él.",
+        altura: "1.0 m",
+        peso: "32.0 kg",
+        genero: "♂ ♀",
+        categoria: "Mono Cerdo",
+        habilidad: "Espíritu Vital",
+        habilidadDescripcion: "Su determinación le impide quedarse dormido.",
+        imagen: "img/pokedex/preame.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+      58: {
+        nombre: "Growlithe",
+        numero: "0058",
+        descripcion:"De naturaleza valiente y honrada, se enfrenta sin miedo a enemigos más grandes y fuertes",
+        altura: "0.7 m",
+        peso: "19.0 kg",
+        genero: "♂ ♀",
+        categoria: "Perrito",
+        habilidad: "Intimidación",
+        habilidadDescripcion: "Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/growlithe.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      59: {
+        nombre: "Arcanine",
+        numero: "0059",
+        descripcion:"Cuenta un antiguo pergamino que la gente se quedaba fascinada al verlo correr por las praderas.",
+        altura: "1.9 m",
+        peso: "155.0 kg",
+        genero: "♂ ♀",
+        categoria: "Leyenda",
+        habilidad: "Intimidación",
+        habilidadDescripcion: "Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/Arcanine Wallpaper.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      60: {
+        nombre: "Poliwag",
+        numero: "0060",
+        descripcion:"La espiral que tiene en el vientre son sus vísceras, visibles a través de la piel. Cuando acaba de comer, se ven de manera aún más nítida.",
+        altura: "0.6 m",
+        peso: "12.4 kg",
+        genero: "♂ ♀",
+        categoria: "Renacuajo",
+        habilidad: "Aborbe Agua",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Agua, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/poliwag.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      61: {
+        nombre: "Poliwhirl",
+        numero: "0061",
+        descripcion:"Aunque puede vivir en tierra firme gracias a que sus extremidades inferiores se han desarrollado, por algún motivo prefiere el medio acuático",
+        altura: "1.0 m",
+        peso: "20.0 kg",
+        genero: "♂ ♀",
+        categoria: "Renacuajo",
+        habilidad: "Aborbe Agua",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Agua, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/poliwhirl.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      62: {
+        nombre: "Poliwrath",
+        numero: "0062",
+        descripcion:"Aunque puede nadar de forma hábil y enérgica utilizando todos sus músculos, por algún motivo prefiere vivir en tierra firme.",
+        altura: "1.3 m",
+        peso: "54.0 kg",
+        genero: "♂ ♀",
+        categoria: "Renacuajo",
+        habilidad: "Aborbe Agua",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Agua, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/poliwrath.jpg",
+        tipos: ["agua","lucha"],
+        debilidades: ["planta","electrico","volador","psíquico","hada"],
+      },
+      63: {
+        nombre: "Abra",
+        numero: "0063",
+        descripcion:"Es capaz de usar sus poderes psíquicos aun estando dormido. Al parecer, el contenido del sueño influye en sus facultades.",
+        altura: "0.9 m",
+        peso: "19.5 kg",
+        genero: "♂ ♀",
+        categoria: "Psi",
+        habilidad: "Sincronía",
+        habilidadDescripcion: "Contagia el envenenamiento, las quemaduras o la parálisis al Pokémon que le cause ese estado.",
+        imagen: "img/pokedex/abra.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+      64: {
+        nombre: "Kadabra",
+        numero: "0064",
+        descripcion:"Duerme suspendido en el aire gracias a sus poderes psíquicos. La cola, de una flexibilidad extraordinaria, hace las veces de almohada.",
+        altura: "1.3 m",
+        peso: "56.5 kg",
+        genero: "♂ ♀",
+        categoria: "Psi",
+        habilidad: "Sincronía",
+        habilidadDescripcion: "Contagia el envenenamiento, las quemaduras o la parálisis al Pokémon que le cause ese estado.",
+        imagen: "img/pokedex/kadabra.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+      65: {
+        nombre: "Alakazam",
+        numero: "0065",
+        descripcion:"Posee una capacidad intelectual fuera de lo común que le permite recordar todo lo sucedido desde el instante de su nacimiento.",
+        altura: "1.5 m",
+        peso: "48.0 kg",
+        genero: "♂ ♀",
+        categoria: "Psi",
+        habilidad: "Sincronía",
+        habilidadDescripcion: "Contagia el envenenamiento, las quemaduras o la parálisis al Pokémon que le cause ese estado.",
+        imagen: "img/pokedex/alakazam.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+      66: {
+        nombre: "Machop",
+        numero: "0066",
+        descripcion:"Es una masa de músculos y, pese a su pequeño tamaño, tiene fuerza de sobra para levantar en brazos a 100 personas.",
+        altura: "0.8 m",
+        peso: "19.5 kg",
+        genero: "♂ ♀",
+        categoria: "Superpoder",
+        habilidad: "Agallas",
+        habilidadDescripcion: "Si sufre un problema de estado, se arma de valor y aumenta su Ataque.",
+        imagen: "img/pokedex/Machop.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+      67: {
+        nombre: "Machoke",
+        numero: "0067",
+        descripcion:"Su musculoso cuerpo es tan fuerte que usa un cinto antifuerza para controlar sus movimientos.",
+        altura: "1.5 m",
+        peso: "70.5 kg",
+        genero: "♂ ♀",
+        categoria: "Superpoder",
+        habilidad: "Agallas",
+        habilidadDescripcion: "Si sufre un problema de estado, se arma de valor y aumenta su Ataque.",
+        imagen: "img/pokedex/machoke.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+      68: {
+        nombre: "Machamp",
+        numero: "0068",
+        descripcion:"Mueve sus cuatro brazos a tal velocidad que resultan imposibles de ver. Puede asestar hasta mil puñetazos en dos segundos.",
+        altura: "1.6 m",
+        peso: "130.0 kg",
+        genero: "♂ ♀",
+        categoria: "Superpoder",
+        habilidad: "Agallas",
+        habilidadDescripcion: "Si sufre un problema de estado, se arma de valor y aumenta su Ataque.",
+        imagen: "img/pokedex/machamp.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+      69: {
+        nombre: "Bellsprout",
+        numero: "0069",
+        descripcion:"Si detecta algún movimiento a su alrededor, sea cuando sea, reacciona enseguida extendiendo sus finas lianas en esa dirección.",
+        altura: "0.7 m",
+        peso: "4.0 kg",
+        genero: "♂ ♀",
+        categoria: "Flor",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/bellsprout.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","volador","hielo","psíquico"],
+      },
+      70: {
+        nombre: "Weepinbel",
+        numero: "0070",
+        descripcion:"Rezuma un fluido neutralizante que impide que su propio ácido lo disuelva.",
+        altura: "1.0 m",
+        peso: "6.4 kg",
+        genero: "♂ ♀",
+        categoria: "Atrapamoscas",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/weepinbel.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","volador","hielo","psíquico"],
+      },
+      71: {
+        nombre: "Victreebel",
+        numero: "0071",
+        descripcion:"Sus jugos gástricos son capaces de disolver completamente cualquier cosa que ingiera, por más dura que sea.",
+        altura: "1.7 m",
+        peso: "15.5 kg",
+        genero: "♂ ♀",
+        categoria: "Atrapamoscas",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/victreebel.jpg",
+        tipos: ["planta","veneno"],
+        debilidades: ["fuego","volador","hielo","psíquico"],
+      },
+      72: {
+        nombre: "Tentacool",
+        numero: "0072",
+        descripcion:"Cuando baja la marea, se pueden encontrar Tentacool deshidratados junto a la orilla.",
+        altura: "0.9 m",
+        peso: "45.5 kg",
+        genero: "♂ ♀",
+        categoria: "Medusa",
+        habilidad: "Viscosecreción",
+        habilidadDescripcion: "Exuda una secreción viscosa y tóxica de intenso hedor que hiere a quienes intentan drenarle PS.",
+        imagen: "img/pokedex/tentacool.jpg",
+        tipos: ["agua","veneno"],
+        debilidades: ["electrico","tierra","psíquico"],
+      },
+      73: {
+        nombre: "Tentacruel",
+        numero: "0073",
+        descripcion:"Aunque puede nadar de forma hábil y enérgica utilizando todos sus músculos, por algún motivo prefiere vivir en tierra firme.",
+        altura: "1.6 m",
+        peso: "55.0 kg",
+        genero: "♂ ♀",
+        categoria: "Medusa",
+        habilidad: "Viscosecreción",
+        habilidadDescripcion: "Exuda una secreción viscosa y tóxica de intenso hedor que hiere a quienes intentan drenarle PS.",
+        imagen: "img/pokedex/tentacruel.jpg",
+        tipos: ["agua","veneno"],
+        debilidades: ["electrico","tierra","psíquico"],
+      },
+      74: {
+        nombre: "Geodude",
+        numero: "0074",
+        descripcion:"En reposo parece una roca normal, pero responde agitando los puños con agresividad si se pisa por error.",
+        altura: "0.4 m",
+        peso: "20.0 kg",
+        genero: "♂ ♀",
+        categoria: "Roca",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/Geodude Pokemon Vertical Wallpaper.jpg",
+        tipos: ["roca","tierra"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+      75: {
+        nombre: "Graveler",
+        numero: "0075",
+        descripcion:"Camina muy lentamente, por lo que se desplaza rodando, sin importarle lo que pueda haber en su camino.",
+        altura: "1.0 m",
+        peso: "105.0 kg",
+        genero: "♂ ♀",
+        categoria: "Roca",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/Graveler Pokemon Vertical Wallpaper.jpg",
+        tipos: ["roca","tierra"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+      76: {
+        nombre: "Golem",
+        numero: "0076",
+        descripcion:"Está cubierto por un duro caparazón formado por losas de piedra. Lo muda una vez al año para aumentar de tamaño.",
+        altura: "1.4 m",
+        peso: "300.0 kg",
+        genero: "♂ ♀",
+        categoria: "Megatón",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/golem.jpg",
+        tipos: ["roca","tierra"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+      77: {
+        nombre: "Ponyta",
+        numero: "0077",
+        descripcion:"Apenas una hora después de nacer, ya le crecen la cola y la crin de fuego, que le confieren un aspecto magnífico.",
+        altura: "1.0 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Caballo Fuego",
+        habilidad: "Aborbe Fuego",
+        habilidadDescripcion: "Si lo alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo.",
+        imagen: "img/pokedex/Ponyta Pokemon Vertical Wallpaper.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      78: {
+        nombre: "Rapidash",
+        numero: "0078",
+        descripcion:"Su crin de fuego centellea cuando galopa como una flecha a velocidades que llegan a alcanzar los 240 km/h.",
+        altura: "1.7 m",
+        peso: "95.0 kg",
+        genero: "♂ ♀",
+        categoria: "Caballo Fuego",
+        habilidad: "Aborbe Fuego",
+        habilidadDescripcion: "Si lo alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo.",
+        imagen: "img/pokedex/rapidash.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      79: {
+        nombre: "Slowpoke",
+        numero: "0079",
+        descripcion:"Increíblemente lento y torpe. Tarda cinco segundos en sentir dolor si lo atacan.",
+        altura: "1.2 m",
+        peso: "36.0 kg",
+        genero: "♂ ♀",
+        categoria: "Atontado",
+        habilidad: "Despiste",
+        habilidadDescripcion: "Su indiferencia evita que sea provocado, caiga presa del enamoramiento o sufra los efectos de Intimidación.",
+        imagen: "img/pokedex/slowpoke.jpg",
+        tipos: ["agua","psíquico"],
+        debilidades: ["planta","electrico","bicho","fantasma","siniestro"],
+      },
+      80: {
+        nombre: "Slowbro",
+        numero: "0080",
+        descripcion:"Según parece, cuando Slowpoke fue a pescar al mar, un Shellder le mordió la cola y así evolucionó a Slowbro.",
+        altura: "1.6 m",
+        peso: "78.5 kg",
+        genero: "♂ ♀",
+        categoria: "Ermitaño",
+        habilidad: "Ritmo Propio",
+        habilidadDescripcion: "Como le gusta hacer las cosas a su manera, no le afecta la confusión ni sufre los efectos de Intimidación.",
+        imagen: "img/pokedex/slowbro.jpg",
+        tipos: ["agua","psíquico"],
+        debilidades: ["planta","electrico","bicho","fantasma","siniestro"],
+      },
+      81: {
+        nombre: "Magnemite",
+        numero: "0081",
+        descripcion:"Las unidades laterales crean ondas electromagnéticas que contrarrestan la gravedad y le permiten flotar.",
+        altura: "0.3 m",
+        peso: "6.0 kg",
+        genero: "Desconocido",
+        categoria: "Imán",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/magnemite.jpg",
+        tipos: ["electrico","acero"],
+        debilidades: ["fuego","tierra","lucha"],
+      },
+      82: {
+        nombre: "Magneton",
+        numero: "0082",
+        descripcion:"Tres Magnemite se enlazan mediante una intensa fuerza magnética. Provoca un fuerte pitido en los oídos a quien se le acerque.",
+        altura: "1.0 m",
+        peso: "60.0 kg",
+        genero: "Desconocido",
+        categoria: "Imán",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/magneton2.jpg",
+        tipos: ["electrico","acero"],
+        debilidades: ["fuego","tierra","lucha"],
+      },
+      83: {
+        nombre: "Farfech´d",
+        numero: "0083",
+        descripcion:"No puede vivir sin el puerro que lleva, así que lo protege de sus atacantes con todas sus fuerzas.",
+        altura: "0.8 m",
+        peso: "15.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pato Salvaje",
+        habilidad: "Vista Lince",
+        habilidadDescripcion: "Su aguda vista evita que su Precisión se reduzca.",
+        imagen: "img/pokedex/farchect.jpg",
+        tipos: ["normal","volador"],
+        debilidades: ["electrico","roca","hielo"],
+      },
+      84: {
+        nombre: "Doduo",
+        numero: "0084",
+        descripcion:"Sus cabezas gemelas comparten la misma información genética y combaten juntas al unísono.",
+        altura: "1.4 m",
+        peso: "39.2 kg",
+        genero: "♂ ♀",
+        categoria: "Ave Gemela",
+        habilidad: "Madrugar",
+        habilidadDescripcion: "Si se duerme, tardará la mitad de tiempo en despertarse.",
+        imagen: "img/pokedex/doduo.jpg",
+        tipos: ["normal","volador"],
+        debilidades: ["electrico","roca","hielo"],
+      },
+      85: {
+        nombre: "Dodrio",
+        numero: "0085",
+        descripcion:"Ahora cuenta con tres corazones y tres pares de pulmones. No alcanza las velocidades de Doduo, pero es capaz de correr durante más tiempo.",
+        altura: "1.8 m",
+        peso: "85.2 kg",
+        genero: "♂ ♀",
+        categoria: "Ave Triple",
+        habilidad: "Madrugar",
+        habilidadDescripcion: "Si se duerme, tardará la mitad de tiempo en despertarse.",
+        imagen: "img/pokedex/dodrio.jpg",
+        tipos: ["normal","volador"],
+        debilidades: ["electrico","roca","hielo"],
+      },
+      86: {
+        nombre: "Seel",
+        numero: "0086",
+        descripcion:"La protuberancia que tiene en la cabeza es tan dura que la usa para abrirse paso a cabezazos por el hielo de los icebergs.",
+        altura: "1.1 m",
+        peso: "90.0 kg",
+        genero: "♂ ♀",
+        categoria: "León Marino",
+        habilidad: "Sebo",
+        habilidadDescripcion: "Gracias a la gruesa capa de grasa que lo protege, reduce a la mitad el daño que recibe de ataques de tipo Fuego o Hielo",
+        imagen: "img/pokedex/seel2.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      87: {
+        nombre: "Dewgong",
+        numero: "0087",
+        descripcion:"Está cubierto por un duro caparazón formado por losas de piedra. Lo muda una vez al año para aumentar de tamaño.",
+        altura: "1.7 m",
+        peso: "120.0 kg",
+        genero: "♂ ♀",
+        categoria: "León Marino",
+        habilidad: "Sebo",
+        habilidadDescripcion: "Gracias a la gruesa capa de grasa que lo protege, reduce a la mitad el daño que recibe de ataques de tipo Fuego o Hielo",
+        imagen: "img/pokedex/dewgong.jpg",
+        tipos: ["agua","hielo"],
+        debilidades: ["planta","electrico","roca","lucha"],
+      },
+      88: {
+        nombre: "Grimer",
+        numero: "0088",
+        descripcion:"Formados a partir de lodo, los Grimer se juntan en lugares sucios para aumentar el número de gérmenes de su cuerpo.",
+        altura: "0.9 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Lodo",
+        habilidad: "Hedor",
+        habilidadDescripcion: "Puede amedrentar a un Pokémon al atacarlo debido al mal olor que emana.",
+        imagen: "img/pokedex/grimer.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+      89: {
+        nombre: "Muk",
+        numero: "0089",
+        descripcion:"Está cubierto por un repugnante lodo. Es tan tóxico que hasta su rastro es venenoso.",
+        altura: "1.2 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Lodo",
+        habilidad: "Hedor",
+        habilidadDescripcion: "Puede amedrentar a un Pokémon al atacarlo debido al mal olor que emana.",
+        imagen: "img/pokedex/muk.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+      90: {
+        nombre: "Shellder",
+        numero: "0090",
+        descripcion:"Está metido en una concha más dura que el diamante, pero tiene un cuerpo muy blando.",
+        altura: "0.3 m",
+        peso: "4.0 kg",
+        genero: "♂ ♀",
+        categoria: "Bivalvo",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/Shellder Pokemon Vertical Wallpaper.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+       91: {
+        nombre: "Cloyster",
+        numero: "0091",
+        descripcion:"A los Cloyster que viven en las fuertes corrientes marinas les crecen largas y afiladas púas en la concha.",
+        altura: "1.5 m",
+        peso: "132.5 kg",
+        genero: "♂ ♀",
+        categoria: "Bivalvo",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/cloyster.jpg",
+        tipos: ["agua","hielo"],
+        debilidades: ["planta","electrico","roca","lucha"],
+      },
+       92: {
+        nombre: "Gastly",
+        numero: "0092",
+        descripcion:"Su estrategia consiste en envolver al rival con su cuerpo gaseoso y envenenarlo a través de la piel.",
+        altura: "1.3 m",
+        peso: "0.1 kg",
+        genero: "♂ ♀",
+        categoria: "Gas",
+        habilidad: "Levitación",
+        habilidadDescripcion: "Su capacidad de flotar sobre el suelo le proporciona inmunidad frente a los movimientos de tipo Tierra.",
+        imagen: "img/pokedex/Gastly Pokemon Vertical Wallpaper.jpg",
+        tipos: ["fantasma","veneno"],
+        debilidades: ["tierra","psíquico","fantasma","siniestro"],
+      },
+       93: {
+        nombre: "Haunter",
+        numero: "0093",
+        descripcion:"Le gusta acechar en la oscuridad y tocarles el hombro a sus víctimas con su mano gaseosa. Estas se quedan temblando para siempre.",
+        altura: "1.6 m",
+        peso: "0.1 kg",
+        genero: "♂ ♀",
+        categoria: "Levitación",
+        habilidad: "Gas",
+        habilidadDescripcion: "Su capacidad de flotar sobre el suelo le proporciona inmunidad frente a los movimientos de tipo Tierra.",
+        imagen: "img/pokedex/Haunter Halloween Ghost Pokemon Vertical Wallpaper.jpg",
+        tipos: ["fantasma","veneno"],
+        debilidades: ["tierra","psíquico","fantasma","siniestro"],
+      },
+       94: {
+        nombre: "Gengar",
+        numero: "0094",
+        descripcion:"Para quitarle la vida a su presa, se desliza en su sombra y espera su oportunidad en silencio.",
+        altura: "1.5 m",
+        peso: "40.5 kg",
+        genero: "♂ ♀",
+        categoria: "Sombra",
+        habilidad: "Cuerpo Maldito",
+        habilidadDescripcion: "Puede anular el movimiento usado en su contra.",
+        imagen: "img/pokedex/gengar.jpg",
+        tipos: ["fantasma","veneno"],
+        debilidades: ["tierra","psíquico","fantasma","siniestro"],
+      },
+       95: {
+        nombre: "Onix",
+        numero: "0095",
+        descripcion:"Al abrirse paso bajo tierra, va absorbiendo todo lo que encuentra. Eso hace que su cuerpo sea así de sólido.",
+        altura: "8.8 m",
+        peso: "210.0 kg",
+        genero: "♂ ♀",
+        categoria: "Serpiente Roca",
+        habilidad: "Robustez",
+        habilidadDescripcion: "El Pokémon no puede debilitarse de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+        imagen: "img/pokedex/onix.jpg",
+        tipos: ["roca","tierra"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+       96: {
+        nombre: "Drowzee",
+        numero: "0096",
+        descripcion:"Recuerda todos los sueños que engulle. Raramente come sueños de adultos porque los de los niños están más ricos.",
+        altura: "1.0 m",
+        peso: "32.4 kg",
+        genero: "♂ ♀",
+        categoria: "Hipnosis",
+        habilidad: "Alerta",
+        habilidadDescripcion: "Revela uno de los movimientos del rival al entrar en combate.",
+        imagen: "img/pokedex/drowzee.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+       97: {
+        nombre: "Hypno",
+        numero: "0097",
+        descripcion:"Cuando mira al enemigo, usa diversos poderes psíquicos como la hipnosis.",
+        altura: "1.6 m",
+        peso: "75.6 kg",
+        genero: "♂ ♀",
+        categoria: "Hipnosis",
+        habilidad: "Alerta",
+        habilidadDescripcion: "Revela uno de los movimientos del rival al entrar en combate.",
+        imagen: "img/pokedex/hypno.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+       98: {
+        nombre: "Krabby",
+        numero: "0098",
+        descripcion:"Es fácil encontrarlo cerca del mar. Las largas pinzas que tiene vuelven a crecer si se las quitan de su sitio.",
+        altura: "0.4 m",
+        peso: "6.5 kg",
+        genero: "♂ ♀",
+        categoria: "Tenaza",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/krabby2.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+       99: {
+        nombre: "Kingler",
+        numero: "0099",
+        descripcion:"La pinza mayor posee una fuerza devastadora, pero es tan pesada que le cuesta usarla con precisión.",
+        altura: "1.3 m",
+        peso: "60.0 kg",
+        genero: "♂ ♀",
+        categoria: "Tenaza",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/kingler.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+       100: {
+        nombre: "Voltorb",
+        numero: "0100",
+        descripcion:"Se mueve rodando. Si el terreno es irregular, una chispa provocada por algún bache lo hará explotar.",
+        altura: "0.5 m",
+        peso: "10.4 kg",
+        genero: "♂ ♀",
+        categoria: "Bola",
+        habilidad: "Electricidad Estática",
+        habilidadDescripcion: "La electricidad estática que lo envuelve puede paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/voltorb.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+       101: {
+        nombre: "Electrode",
+        numero: "0101",
+        descripcion:"Cuanta más energía almacena, mayor velocidad alcanza, aunque aumenta también el riesgo de que explote.",
+        altura: "1.2 m",
+        peso: "66.6 kg",
+        genero: "♂ ♀",
+        categoria: "Bola",
+        habilidad: "Electricidad Estática",
+        habilidadDescripcion: "La electricidad estática que lo envuelve puede paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/Electrode fanart!!.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+       102: {
+        nombre: "Exeggcute",
+        numero: "0102",
+        descripcion:"Si alguien confunde a una de sus cabezas con un huevo y la toca, se reagrupa con las otras para atacar todas juntas.",
+        altura: "0.4 m",
+        peso: "2.5 kg",
+        genero: "♂ ♀",
+        categoria: "Huevo",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/Exeggcute Art work from Celestial Guardians_ Lunala.jpg",
+        tipos: ["planta","psíquico"],
+        debilidades: ["fuego","bicho","volador","veneno","hielo","fantasma","siniestro"],
+      },
+      
+       103: {
+        nombre: "Exeggutor",
+        numero: "0103",
+        descripcion:"Se lo llama la Selva Andante. Cada fruto tiene una cara distinta y voluntad propia.",
+        altura: "2.0 m",
+        peso: "120.0 kg",
+        genero: "♂ ♀",
+        categoria: "Coco",
+        habilidad: "Clorofila",
+        habilidadDescripcion: "Aumenta su Velocidad cuando hace sol.",
+        imagen: "img/pokedex/Exeggutor.jpg",
+        tipos: ["planta","psíquico"],
+        debilidades: ["fuego","bicho","volador","veneno","hielo","fantasma","siniestro"],
+      }, 
+       104: {
+        nombre: "Cubone",
+        numero: "0104",
+        descripcion:"Cuando llora al acordarse de su madre fallecida, su llanto resuena en el cráneo que lleva en la cabeza.",
+        altura: "0.4 m",
+        peso: "6.5 kg",
+        genero: "♂ ♀",
+        categoria: "Solitario",
+        habilidad: "Pararrayos",
+        habilidadDescripcion: "Atrae y neutraliza los movimientos de tipo Eléctrico, que además le aumentan el Ataque Especial.",
+        imagen: "img/pokedex/cubone.jpg",
+        tipos: ["tierra"],
+        debilidades: ["planta","agua","hielo"],
+      },
+       105: {
+        nombre: "Marowak",
+        numero: "0105",
+        descripcion:"Ha evolucionado tras fortalecerse y superar su pena. Ahora lucha con arrojo blandiendo su hueso a modo de arma.",
+        altura: "1.0 m",
+        peso: "45.0 kg",
+        genero: "♂ ♀",
+        categoria: "Apilahueso",
+        habilidad: "Pararrayos",
+        habilidadDescripcion: "Atrae y neutraliza los movimientos de tipo Eléctrico, que además le aumentan el Ataque Especial.",
+        imagen: "img/pokedex/Marowak Pokemon Vertical Wallpaper.jpg",
+        tipos: ["tierra"],
+        debilidades: ["planta","agua","hielo"],
+      },
+       106: {
+        nombre: "Hitmonlee",
+        numero: "0106",
+        descripcion:"Endurece los músculos de las plantas de los pies en el momento en el que impactan contra su rival para potenciar al máximo sus patadas.",
+        altura: "1.5 m",
+        peso: "49.8 kg",
+        genero: "♂ ♀",
+        categoria: "Patada",
+        habilidad: "Flexibilidad",
+        habilidadDescripcion: "Evita ser paralizado gracias a la flexibilidad de su cuerpo.",
+        imagen: "img/pokedex/Hitmonlee Gym Session Pokemon Vertical Wallpaper.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+       107: {
+        nombre: "Hitmonchan",
+        numero: "0107",
+        descripcion:"Acorrala a sus enemigos con combinaciones de puñetazos con ambos puños, para luego darles el golpe de gracia con un directo a 500 km/h.",
+        altura: "1.4 m",
+        peso: "50.2 kg",
+        genero: "♂ ♀",
+        categoria: "Puñetazo",
+        habilidad: "Puño Férreo",
+        habilidadDescripcion: "Aumenta la potencia de los movimientos con los puños.",
+        imagen: "img/pokedex/Hitmonchan Gym Session Pokemon Vertical Wallpaper.jpg",
+        tipos: ["lucha"],
+        debilidades: ["volador","psíquico","hada"],
+      },
+       108: {
+        nombre: "Lickitung",
+        numero: "0108",
+        descripcion:"Si sus lametones no se tratan a tiempo, su saliva pegajosa y urticante puede provocar picores persistentes.",
+        altura: "1.2 m",
+        peso: "65.5 kg",
+        genero: "♂ ♀",
+        categoria: "Lametazo",
+        habilidad: "Despiste",
+        habilidadDescripcion: "Su indiferencia evita que sea provocado, caiga presa del enamoramiento o sufra los efectos de Intimidación.",
+        imagen: "img/pokedex/lickitung.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+       109: {
+        nombre: "Koffing",
+        numero: "0109",
+        descripcion:"Su cuerpo, con forma de globo y poco grosor, encierra gases muy tóxicos que pueden ocasionar explosiones espontáneas de gran magnitud.",
+        altura: "0.6 m",
+        peso: "1.0 kg",
+        genero: "♂ ♀",
+        categoria: "Gas Venenoso",
+        habilidad: "Levitación",
+        habilidadDescripcion: "Su capacidad de flotar sobre el suelo le proporciona inmunidad frente a los movimientos de tipo Tierra.",
+        imagen: "img/pokedex/koffing.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+       110: {
+        nombre: "Weezing",
+        numero: "0110",
+        descripcion:"Diluir sus venenosos gases internos lo máximo posible permite fabricar perfumes de alta gama.",
+        altura: "1.2 m",
+        peso: "9.5 kg",
+        genero: "♂ ♀",
+        categoria: "Gas Venenoso",
+        habilidad: "Levitación",
+        habilidadDescripcion: "Su capacidad de flotar sobre el suelo le proporciona inmunidad frente a los movimientos de tipo Tierra.",
+        imagen: "img/pokedex/WEEZING! _D.jpg",
+        tipos: ["veneno"],
+        debilidades: ["tierra","psíquico"],
+      },
+       111: {
+        nombre: "Rhyhorn",
+        numero: "0111",
+        descripcion:"Puede controlar un territorio de hasta 10 km de radio, pero, cuando se pone a correr, parece olvidársele dónde empieza y dónde acaba.",
+        altura: "1.0 m",
+        peso: "115.0 kg",
+        genero: "♂ ♀",
+        categoria: "Punzante",
+        habilidad: "Pararrayos",
+        habilidadDescripcion: "Atrae y neutraliza los movimientos de tipo Eléctrico, que además le aumentan el Ataque Especial.",
+        imagen: "img/pokedex/Rhyhorn Pokemon Vertical Wallpaper.jpg",
+        tipos: ["tierra","roca"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+       112: {
+        nombre: "Rhydon",
+        numero: "0112",
+        descripcion:"Hace chocar el cuerno con el de sus congéneres para afilarlo. Es capaz de horadar diamantes en bruto con él.",
+        altura: "1.9 m",
+        peso: "120.0 kg",
+        genero: "♂ ♀",
+        categoria: "Taladro",
+        habilidad: "Pararrayos",
+        habilidadDescripcion: "Atrae y neutraliza los movimientos de tipo Eléctrico, que además le aumentan el Ataque Especial.",
+        imagen: "img/pokedex/rhydon.jpg",
+        tipos: ["tierra","roca"],
+        debilidades: ["planta","agua","tierra","hielo","lucha","acero"],
+      },
+       113: {
+        nombre: "Chansey",
+        numero: "0113",
+        descripcion:"Un generoso Pokémon que pone huevos muy nutritivos y se los da a personas o Pokémon heridos.",
+        altura: "1.1 m",
+        peso: "34.6 kg",
+        genero: "♂ ♀",
+        categoria: "Huevo",
+        habilidad: "Cura Natural",
+        habilidadDescripcion: "Sus problemas de estado desaparecen cuando se retira del combate.",
+        imagen: "img/pokedex/chansey.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+       114: {
+        nombre: "Tangela",
+        numero: "0114",
+        descripcion:"Sus lianas no dejan de crecer aunque se le desprendan. Aún se desconoce qué aspecto tiene sin ellas.",
+        altura: "1.0 m",
+        peso: "35.0 kg",
+        genero: "♂ ♀",
+        categoria: "Enredadera",
+        habilidad: "Defensa Hoja",
+        habilidadDescripcion: "Evita los problemas de estado si hace sol.",
+        imagen: "img/pokedex/tangela.jpg",
+        tipos: ["planta"],
+        debilidades: ["fuego","bicho","volador","veneno","hielo"],
+      },
+      115: {
+        nombre: "Kangaskhan",
+        numero: "0115",
+        descripcion:"Aunque lleve una cría en el marsupio, su juego de pies no pierde ligereza. Abruma al rival con ráfagas de ágiles puñetazos.",
+        altura: "2.2 m",
+        peso: "80.0 kg",
+        genero: "♂ ♀",
+        categoria: "Maternal",
+        habilidad: "Intrépido",
+        habilidadDescripcion: "Alcanza a Pokémon de tipo Fantasma con movimientos de tipo Normal o Lucha. Además, no sufre los efectos de Intimidación.",
+        imagen: "img/pokedex/kangaskhan.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      116: {
+        nombre: "Horsea",
+        numero: "0116",
+        descripcion:"Si es atacado por un enemigo, por muy grande que sea, nada veloz a un lugar seguro gracias a su fornida aleta dorsal.",
+        altura: "0.4 m",
+        peso: "8.0 kg",
+        genero: "♂ ♀",
+        categoria: "Dragón",
+        habilidad: "Francotirador",
+        habilidadDescripcion: "Potencia los golpes críticos que asesta aún más de lo normal.",
+        imagen: "img/pokedex/horsea.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      117: {
+        nombre: "Seadra",
+        numero: "0117",
+        descripcion:"En esta especie, es el macho quien se ocupa de cuidar a las crías, a las que defiende con sus púas venenosas de cualquiera que se les acerque.",
+        altura: "1.2 m",
+        peso: "25.0 kg",
+        genero: "♂ ♀",
+        categoria: "Dragón",
+        habilidad: "Francotirador",
+        habilidadDescripcion: "Potencia los golpes críticos que asesta aún más de lo normal.",
+        imagen: "img/pokedex/seadra.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      118: {
+        nombre: "Goldeen",
+        numero: "0118",
+        descripcion:"Sus aletas pectorales, caudal y dorsal ondean gráciles en el agua. Por eso se le llama el Bailarín Acuático.",
+        altura: "0.6 m",
+        peso: "15.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pez Color",
+        habilidad: "Nado Rápido",
+        habilidadDescripcion: "Aumenta su Velocidad cuando llueve.",
+        imagen: "img/pokedex/Goldeen Pokemon Vertical Wallpaper.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      119: {
+        nombre: "Seaking",
+        numero: "0119",
+        descripcion:"En otoño gana algo de peso para atraer a posibles parejas y se cubre de llamativos colores.",
+        altura: "1.3 m",
+        peso: "39.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pez Color",
+        habilidad: "Nado Rápido",
+        habilidadDescripcion: "Aumenta su Velocidad cuando llueve.",
+        imagen: "img/pokedex/seaking.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      120: {
+        nombre: "Staryu",
+        numero: "0120",
+        descripcion:"A finales de verano, se pueden ver grupos de Staryu en la orilla de la playa sincronizando el brillo de sus núcleos a ritmo regular.",
+        altura: "0.8 m",
+        peso: "34.5 kg",
+        genero: "♂ ♀",
+        categoria: "Estrella",
+        habilidad: "Cura Natural",
+        habilidadDescripcion: "Sus problemas de estado desaparecen cuando se retira del combate.",
+        imagen: "img/pokedex/staryu.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      121: {
+        nombre: "Starmie",
+        numero: "0121",
+        descripcion:"El núcleo rojo que tiene en el centro del cuerpo emite extrañas señales de radio hacia el cielo nocturno.",
+        altura: "1.1 m",
+        peso: "80.0 kg",
+        genero: "♂ ♀",
+        categoria: "Misterioso",
+        habilidad: "Cura Natural",
+        habilidadDescripcion: "Sus problemas de estado desaparecen cuando se retira del combate.",
+        imagen: "img/pokedex/starmie.jpg",
+        tipos: ["agua","psíquico"],
+        debilidades: ["planta","electrico","bicho","fantasma","siniestro"],
+      },
+      122: {
+        nombre: "Mr. Mime",
+        numero: "0122",
+        descripcion:"Un experto de la pantomima capaz de crear paredes invisibles pero sólidas solo con sus gestos.",
+        altura: "1.3 m",
+        peso: "54.5 kg",
+        genero: "♂ ♀",
+        categoria: "Barrera",
+        habilidad: "Insonorizar",
+        habilidadDescripcion: "Su aislamiento acústico lo protege de movimientos que usan sonido",
+        imagen: "img/pokedex/Mr_ Mime Pokemon Vertical Wallpaper.jpg",
+        tipos: ["psíquico","hada"],
+        debilidades: ["veneno","fantasma","acero"],
+      },
+      123: {
+        nombre: "Scyther",
+        numero: "0123",
+        descripcion:"Avanza por la hierba con sus afiladas guadañas, más rápido de lo que el ojo humano puede percibir.",
+        altura: "1.5 m",
+        peso: "56.0 kg",
+        genero: "♂ ♀",
+        categoria: "Mantis",
+        habilidad: "Enjambre",
+        habilidadDescripcion: "Potencia sus movimientos de tipo Bicho cuando le quedan pocos PS.",
+        imagen: "img/pokedex/scyther Wallpaper.jpg",
+        tipos: ["bicho","volador"],
+        debilidades: ["fuego","electrico","volador","roca","hielo"],
+      },
+      124: {
+        nombre: "Jynx",
+        numero: "0124",
+        descripcion:"En cierta parte de Galar se conocía a Jynx como la Reina del Hielo y se reverenciaba con cierto temor.",
+        altura: "1.4 m",
+        peso: "40.6 kg",
+        genero: "♂ ♀",
+        categoria: "Despiste",
+        habilidad: "Defensa Hoja",
+        habilidadDescripcion: "Su indiferencia evita que sea provocado, caiga presa del enamoramiento o sufra los efectos de Intimidación.",
+        imagen: "img/pokedex/jynx.jpg",
+        tipos: ["hielo","psíquico"],
+        debilidades: ["fuego","bicho","roca","fantasma","siniestro","acero"],
+      },
+      125: {
+        nombre: "Electabuzz",
+        numero: "0125",
+        descripcion:"Su cuerpo descarga electricidad constantemente, por lo que eriza el cabello a cualquiera que se le acerque.",
+        altura: "1.1 m",
+        peso: "30.0 kg",
+        genero: "♂ ♀",
+        categoria: "Eléctrico",
+        habilidad: "Electricidad Estática",
+        habilidadDescripcion: "La electricidad estática que lo envuelve puede paralizar al Pokémon que lo ataque con un movimiento de contacto.",
+        imagen: "img/pokedex/electabuzz.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+      126: {
+        nombre: "Magmar",
+        numero: "0126",
+        descripcion:"Fue descubierto junto al cráter de un volcán. Escupe llamaradas y su temperatura corporal alcanza los 1200 ºC.",
+        altura: "1.3 m",
+        peso: "44.5 kg",
+        genero: "♂ ♀",
+        categoria: "Escupefuego",
+        habilidad: "Cuerpo Llama",
+        habilidadDescripcion: "Puede quemar al Pokémon que lo ataque con un movimiento de contacto",
+        imagen: "img/pokedex/magmar.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      127: {
+        nombre: "Pinsir",
+        numero: "0127",
+        descripcion:"Los Pinsir se juzgan entre ellos por la robustez de la cornamenta. Cuanto más imponente sea, más agradará a sus congéneres del sexo opuesto.",
+        altura: "1.5 m",
+        peso: "55.0 kg",
+        genero: "♂ ♀",
+        categoria: "Escarabajo",
+        habilidad: "Corte Fuerte",
+        habilidadDescripcion: "Evita que otros Pokémon le reduzcan el Ataque.",
+        imagen: "img/pokedex/pinsir.jpg",
+        tipos: ["bicho"],
+        debilidades: ["fuego","volador","roca"],
+      },
+      128: {
+        nombre: "Tauros",
+        numero: "0128",
+        descripcion:"Cuando ve a un enemigo, se fustiga con las colas y carga ferozmente contra él.",
+        altura: "1.4 m",
+        peso: "88.4 kg",
+        genero: "♂",
+        categoria: "Toro Bravo",
+        habilidad: "Intimidación",
+        habilidadDescripcion: "Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/tauros.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      129: {
+        nombre: "Magikarp",
+        numero: "0129",
+        descripcion:"Un Pokémon desvalido y patético. A veces es capaz de saltar alto, pero rara vez más de 2 m.",
+        altura: "0.9 m",
+        peso: "10.0 kg",
+        genero: "♂ ♀",
+        categoria: "Pez",
+        habilidad: "Nado Rápido",
+        habilidadDescripcion: "Aumenta su Velocidad cuando llueve.",
+        imagen: "img/pokedex/magikarp.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      130: {
+        nombre: "Gyarados",
+        numero: "0130",
+        descripcion:"Cuando aparece, monta en cólera. No deja de estar furioso hasta que lo destruye todo.",
+        altura: "6.5 m",
+        peso: "235.0 kg",
+        genero: "♂ ♀",
+        categoria: "Atrocidad",
+        habilidad: "Intimidación",
+        habilidadDescripcion: "Al entrar en combate, amilana al rival de tal manera que reduce su Ataque.",
+        imagen: "img/pokedex/gyarados.jpg",
+        tipos: ["agua","volador"],
+        debilidades: ["electrico","roca"],
+      },
+      131: {
+        nombre: "Lapras",
+        numero: "0131",
+        descripcion:"Surca los mares transportando gente sobre el lomo. Al parecer, a veces entona un melodioso canto si está de buen humor.",
+        altura: "2.5 m",
+        peso: "220.0 kg",
+        genero: "♂ ♀",
+        categoria: "Transporte",
+        habilidad: "Absorbe Agua",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Agua, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/lapras.jpg",
+        tipos: ["agua","hielo"],
+        debilidades: ["planta","electrico","roca","lucha"],
+      },
+      132: {
+        nombre: "Ditto",
+        numero: "0132",
+        descripcion:"Su habilidad para transformarse es perfecta, pero, si se le hace reír, perderá la fuerza y no podrá mantenerse transformado.",
+        altura: "0.3 m",
+        peso: "4.0 kg",
+        genero: "Desconocido",
+        categoria: "Transformación",
+        habilidad: "Flexibilidad",
+        habilidadDescripcion: "Evita ser paralizado gracias a la flexibilidad de su cuerpo.",
+        imagen: "img/pokedex/Ditto Shapeshifting Pokemon Vertical Wallpaper.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      133: {
+        nombre: "Eevee",
+        numero: "0133",
+        descripcion:"Es capaz de evolucionar de muchas maneras para adaptarse sin problemas a cualquier medio.",
+        altura: "0.3 m",
+        peso: "6.5 kg",
+        genero: "♂ ♀",
+        categoria: "Evolución",
+        habilidad: "Fuga",
+        habilidadDescripcion: "Puede escapar de cualquier Pokémon salvaje.",
+        imagen: "img/pokedex/eevee.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      134: {
+        nombre: "Vaporeon",
+        numero: "0134",
+        descripcion:"Vive cerca del agua. Su cola termina en una aleta parecida a la de un pez, por lo que hay gente que lo confunde con una sirena.",
+        altura: "1.0 m",
+        peso: "29.0 kg",
+        genero: "♂ ♀",
+        categoria: "Burbuja",
+        habilidad: "Absorbe Agua",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Agua, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/Vaporeon Wallpaper 👀.jpg",
+        tipos: ["agua"],
+        debilidades: ["planta","electrico"],
+      },
+      135: {
+        nombre: "Jolteon",
+        numero: "0135",
+        descripcion:"Concentra la débil actividad eléctrica de sus células para lanzar dañinas descargas.",
+        altura: "0.8 m",
+        peso: "24.5 kg",
+        genero: "♂ ♀",
+        categoria: "Relámpago",
+        habilidad: "Absorbe Electricidad",
+        habilidadDescripcion: "Si lo alcanza un movimiento de tipo Eléctrico, recupera PS en vez de sufrir daño.",
+        imagen: "img/pokedex/Joteon.jpg",
+        tipos: ["electrico"],
+        debilidades: ["tierra"],
+      },
+      136: {
+        nombre: "Flareon",
+        numero: "0136",
+        descripcion:"Calienta el aire que inhala en su saca de fuego y lo expulsa a 1700ºC.",
+        altura: "0.9 m",
+        peso: "25.0 kg",
+        genero: "♂ ♀",
+        categoria: "Llama",
+        habilidad: "Absorbe Fuego",
+        habilidadDescripcion: "Si lo alcanza algún movimiento de tipo Fuego, potencia sus propios movimientos de dicho tipo.",
+        imagen: "img/pokedex/flareon.jpg",
+        tipos: ["fuego"],
+        debilidades: ["agua","roca","tierra"],
+      },
+      137: {
+        nombre: "Porygon",
+        numero: "0137",
+        descripcion:"Un Pokémon artificial que no respira, por lo que se le supone la capacidad de desenvolverse sin problemas en cualquier entorno.",
+        altura: "0.8 m",
+        peso: "36.5 kg",
+        genero: "Desconocido",
+        categoria: "Virtual",
+        habilidad: "Descarga",
+        habilidadDescripcion: "Compara la Defensa y la Defensa Especial del rival para ver cuál es inferior y aumenta su propio Ataque o Ataque Especial según sea lo más eficaz.",
+        imagen: "img/pokedex/porygon.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      138: {
+        nombre: "Omanyte",
+        numero: "0138",
+        descripcion:"Varios ejemplares han escapado o bien han sido liberados tras su restauración, lo que comienza a suscitar una serie de problemas.",
+        altura: "0.4 m",
+        peso: "7.5 kg",
+        genero: "♂ ♀",
+        categoria: "Espiral",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/omanyte.jpg",
+        tipos: ["roca","agua"],
+        debilidades: ["planta","electrico","tierra","lucha"],
+      },
+      139: {
+        nombre: "Omastar",
+        numero: "0139",
+        descripcion:"Se cree que se extinguió porque el excesivo tamaño y peso de su concha le impedían moverse con rapidez para capturar presas.",
+        altura: "1.0 m",
+        peso: "35.0 kg",
+        genero: "♂ ♀",
+        categoria: "Espiral",
+        habilidad: "Caparazón",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/omastar.jpg",
+        tipos: ["roca","agua"],
+        debilidades: ["planta","electrico","tierra","lucha"],
+      },
+       140: {
+        nombre: "Kabuto",
+        numero: "0140",
+        descripcion:"Un Pokémon casi extinto. Cada tres días, muda el caparazón, que se va endureciendo de forma progresiva.",
+        altura: "0.5 m",
+        peso: "11.5 kg",
+        genero: "♂ ♀",
+        categoria: "Armazón",
+        habilidad: "Armadura Batalla",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/kabuto.jpg",
+        tipos: ["roca","agua"],
+        debilidades: ["planta","electrico","tierra","lucha"],
+      },
+       141: {
+        nombre: "Kabutops",
+        numero: "0141",
+        descripcion:"Despedaza a las presas que atrapa para sorber sus fluidos y deja los restos para que otros Pokémon den buena cuenta de ellos.",
+        altura: "1.3 m",
+        peso: "40.5 kg",
+        genero: "♂ ♀",
+        categoria: "Armazón",
+        habilidad: "Armadura Batalla",
+        habilidadDescripcion: "La robusta coraza que lo protege bloquea los golpes críticos.",
+        imagen: "img/pokedex/kabutops.jpg",
+        tipos: ["roca","agua"],
+        debilidades: ["planta","electrico","tierra","lucha"],
+      },
+       142: {
+        nombre: "Aerodactyl",
+        numero: "0142",
+        descripcion:"Un feroz Pokémon de la época prehistórica al que no bastan todos los avances tecnológicos actuales para regenerar a la perfección.",
+        altura: "1.8 m",
+        peso: "59.0 kg",
+        genero: "♂ ♀",
+        categoria: "Fósil",
+        habilidad: "Cabeza Roca",
+        habilidadDescripcion: "No pierde PS al usar movimientos que también hieren al usuario.",
+        imagen: "img/pokedex/Aerodactyl Pokemon Vertical Wallpaper.jpg",
+        tipos: ["roca","volador"],
+        debilidades: ["agua","electrico","roca","hielo","acero"],
+      },
+       143: {
+        nombre: "Snorlax",
+        numero: "0143",
+        descripcion:"Este Pokémon es un glotón que lo único que hace aparte de comer es dormir. Puede ingerir hasta 400 kg de comida en un solo día.",
+        altura: "2.1 m",
+        peso: "460.0 kg",
+        genero: "♂ ♀",
+        categoria: "Dormir",
+        habilidad: "Sebo",
+        habilidadDescripcion: "Gracias a la gruesa capa de grasa que lo protege, reduce a la mitad el daño que recibe de ataques de tipo Fuego o Hielo.",
+        imagen: "img/pokedex/snorlax.jpg",
+        tipos: ["normal"],
+        debilidades: ["lucha"],
+      },
+      144: {
+        nombre: "Articuno",
+        numero: "0144",
+        descripcion:"Una de las aves legendarias. Es capaz de generar ventiscas congelando la humedad del aire.",
+        altura: "1.7 m",
+        peso: "55.4 kg",
+        genero: "Desconocido",
+        categoria: "Congelar",
+        habilidad: "Presión",
+        habilidadDescripcion: "Presiona al rival de tal manera que este consume más PP al usar sus movimientos.",
+        imagen: "img/pokedex/articuno.jpg",
+        tipos: ["hielo","volador"],
+        debilidades: ["fuego","electrico","roca","acero"],
+      },
+       145: {
+        nombre: "Zapdos",
+        numero: "0145",
+        descripcion:"Una de las aves legendarias. Según dicen, vive en los nubarrones y controla los rayos a su antojo.",
+        altura: "1.6 m",
+        peso: "52.6 kg",
+        genero: "♂ ♀",
+        categoria: "Eléctrico",
+        habilidad: "Presión",
+        habilidadDescripcion: "Presiona al rival de tal manera que este consume más PP al usar sus movimientos.",
+        imagen: "img/pokedex/zapdos.jpg",
+        tipos: ["electrico","volador"],
+        debilidades: ["roca","hielo"],
+      },
+
+       146: {
+        nombre: "Moltres",
+        numero: "0146",
+        descripcion:"Una de las aves legendarias. Dicen que su presencia anuncia la llegada de la primavera.",
+        altura: "2.0 m",
+        peso: "60.0 kg",
+        genero: "♂ ♀",
+        categoria: "Llama",
+        habilidad: "Presión",
+        habilidadDescripcion: "Presiona al rival de tal manera que este consume más PP al usar sus movimientos.",
+        imagen: "img/pokedex/moltres.jpg",
+        tipos: ["fuego","volador"],
+        debilidades: ["agua","electrico","roca"],
+      },
+
+       147: {
+        nombre: "Dratini",
+        numero: "0147",
+        descripcion:"Durante la etapa de crecimiento, muda muchas veces de piel y se protege mediante una cascada.",
+        altura: "1.8 m",
+        peso: "3.3 kg",
+        genero: "♂ ♀",
+        categoria: "Dragón",
+        habilidad: "Mudar",
+        habilidadDescripcion: "Puede curar sus problemas de estado al mudar la piel.",
+        imagen: "img/pokedex/Dratini Pokemon Vertical Wallpaper.jpg",
+        tipos: ["dragon"],
+        debilidades: ["hielo","dragon","hada"],
+      },
+
+       148: {
+        nombre: "Dragonair",
+        numero: "0148",
+        descripcion:"Dicen que, cuando su cuerpo desprende un aura, el tiempo empieza a cambiar inmediatamente.",
+        altura: "4.0 m",
+        peso: "16.5 kg",
+        genero: "♂ ♀",
+        categoria: "Dragón",
+        habilidad: "Mudar",
+        habilidadDescripcion: "Puede curar sus problemas de estado al mudar la piel.",
+        imagen: "img/pokedex/dragonair.jpg",
+        tipos: ["dragon"],
+        debilidades: ["hielo","dragon","hada"],
+      },
+      149: {
+        nombre: "Dragonite",
+        numero: "0149",
+        descripcion:"Se dice que vive en algún lugar del mar. Guía a la costa a las tripulaciones de los barcos que naufragaron.",
+        altura: "2.2 m",
+        peso: "210.0 kg",
+        genero: "♂ ♀",
+        categoria: "Dragón",
+        habilidad: "Fuerza Mental",
+        habilidadDescripcion: "Gracias a su profunda concentración, no se amedrenta ante los ataques de otros Pokémon ni sufre los efectos de Intimidación.",
+        imagen: "img/pokedex/dragonite.jpg",
+        tipos: ["dragon","volador"],
+        debilidades: ["roca","hielo","dragon","hada"],
+      },
+      150: {
+        nombre: "Mewtwo",
+        numero: "0150",
+        descripcion:"Su ADN es casi el mismo que el de Mew. Sin embargo, su tamaño y carácter son muy diferentes.",
+        altura: "2.0 m",
+        peso: "122.0 kg",
+        genero: "Desconocido",
+        categoria: "Genético",
+        habilidad: "Presión",
+        habilidadDescripcion: "Presiona al rival de tal manera que este consume más PP al usar sus movimientos.",
+        imagen: "img/pokedex/mewtwo.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+      151: {
+        nombre: "Mew",
+        numero: "0148",
+        descripcion:"Si se observa a través de un microscopio, puede distinguirse cuán corto, fino y delicado es el pelaje de este Pokémon.",
+        altura: "0.4 m",
+        peso: "4.0 kg",
+        genero: "♂ ♀",
+        categoria: "Nueva Especie",
+        habilidad: "Sincronía",
+        habilidadDescripcion: "Contagia el envenenamiento, las quemaduras o la parálisis al Pokémon que le cause ese estado.",
+        imagen: "img/pokedex/Mew - yuzimiONLINE.jpg",
+        tipos: ["psíquico"],
+        debilidades: ["bicho","fantasma","siniestro"],
+      },
+
+    };
+
+   function mostrarInfoPokemon(numeroPokemon) {
+    const pokemon = pokemonData[numeroPokemon];
+    if (!pokemon) return;
+
+    // Llenar el modal con los datos
+    document.getElementById('modalNombrePokemon').textContent = pokemon.nombre;
+    document.getElementById('modalNumeroPokemon').textContent = `N.° ${pokemon.numero}`;
+    document.getElementById('modalDescripcion').textContent = pokemon.descripcion;
+    document.getElementById('modalAltura').textContent = pokemon.altura;
+    document.getElementById('modalPeso').textContent = pokemon.peso;
+    document.getElementById('modalGenero').textContent = pokemon.genero;
+    document.getElementById('modalCategoria').textContent = pokemon.categoria;
+    document.getElementById('modalHabilidad').textContent = pokemon.habilidad;
+    
+    // AÑADE ESTA LÍNEA para la descripción de la habilidad
+    const habilidadDescripcionElement = document.getElementById('modalHabilidadDescripcion');
+    if (habilidadDescripcionElement) {
+        habilidadDescripcionElement.textContent = pokemon.habilidadDescripcion || "Sin descripción disponible.";
+    }
+    
+    document.getElementById('modalImagenPokemon').src = pokemon.imagen;
+
+    // Mostrar tipos
+    const tiposContainer = document.getElementById('modalTipos');
+    tiposContainer.innerHTML = '';
+    pokemon.tipos.forEach(tipo => {
+        const span = document.createElement('span');
+        span.className = `tipo tipo-${tipo}`;
+        span.textContent = tipo.toUpperCase();
+        tiposContainer.appendChild(span);
+    });
+
+    // Mostrar debilidades
+    const debilidadesContainer = document.getElementById('modalDebilidades');
+    debilidadesContainer.innerHTML = '';
+    pokemon.debilidades.forEach(debilidad => {
+        const span = document.createElement('span');
+        span.className = `tipo tipo-${debilidad}`;
+        span.textContent = debilidad.toUpperCase();
+        debilidadesContainer.appendChild(span);
+    });
+
+    // Mostrar el modal
+    document.getElementById('modalPokemon').style.display = 'block';
+}
+
+    // Agregar evento de clic a cada cuadrado
+    document.querySelectorAll(".cuadrado").forEach((cuadrado, index) => {
+      cuadrado.addEventListener("click", () => {
+        // El número está en el elemento .numero-pokemon
+        const numeroElement = cuadrado.querySelector(".numero-pokemon");
+        const numeroTexto = numeroElement.textContent;
+        const numero = parseInt(numeroTexto.replace("N.° ", ""));
+
+        // También podemos usar el índice + 1 como fallback
+        const pokemonNum = numero || index + 1;
+        mostrarInfoPokemon(pokemonNum);
+      });
+    });
+
+    // Cerrar modal al hacer clic en la X
+    document.querySelector(".cerrar-modal").addEventListener("click", () => {
+      document.getElementById("modalPokemon").style.display = "none";
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener("click", (event) => {
+      const modal = document.getElementById("modalPokemon");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    function buscarPokemon() {
+    // Obtener el valor del input
+    const inputBuscar = document.getElementById('buscadorPokemon');
+    if (!inputBuscar) {
+        console.error("No se encontró el input con id 'buscadorPokemon'");
+        return;
+    }
+    
+    const textoBusqueda = inputBuscar.value.toLowerCase().trim();
+    console.log("🔍 Buscando:", textoBusqueda);
+    
+    // Obtener todos los cuadrados
+    const todosLosCuadrados = document.querySelectorAll('.cuadrado');
+    console.log("📦 Cuadrados encontrados:", todosLosCuadrados.length);
+    
+    let encontrados = 0;
+    
+    todosLosCuadrados.forEach((cuadrado, index) => {
+        // Obtener nombre y número
+        const nombreElement = cuadrado.querySelector('.nombre-pokemon');
+        const numeroElement = cuadrado.querySelector('.numero-pokemon');
+        
+        const nombre = nombreElement ? nombreElement.textContent.toLowerCase() : '';
+        const numero = numeroElement ? numeroElement.textContent.toLowerCase() : '';
+        
+        // Verificar si coincide con la búsqueda
+        if (textoBusqueda === '') {
+            cuadrado.style.display = 'block';
+            encontrados++;
+        } else if (nombre.includes(textoBusqueda) || numero.includes(textoBusqueda)) {
+            cuadrado.style.display = 'block';
+            encontrados++;
+        } else {
+            cuadrado.style.display = 'none';
+        }
+    });
+    
+    console.log("✅ Encontrados:", encontrados);
+    
+    // Mostrar mensaje si no hay resultados
+    const grid = document.querySelector('.grid-cuadrados');
+    let mensajeExistente = document.querySelector('.sin-resultados-mensaje');
+    
+    if (encontrados === 0 && textoBusqueda !== '') {
+        if (!mensajeExistente) {
+            const mensaje = document.createElement('div');
+            mensaje.className = 'sin-resultados-mensaje';
+            mensaje.innerHTML = `<p style="text-align: center; padding: 40px; background: white; border-radius: 20px; color: #666;">
+                🔍 No se encontró ningún Pokémon con "<strong>${textoBusqueda}</strong>"
+            </p>`;
+            grid.appendChild(mensaje);
+        }
+    } else if (mensajeExistente) {
+        mensajeExistente.remove();
+    }
+}
+
+// Asignar eventos después de que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    const btnBuscar = document.getElementById('btnBuscarPokemon');
+    const inputBuscar = document.getElementById('buscadorPokemon');
+    
+    if (btnBuscar) {
+        console.log("✅ Botón encontrado, asignando evento");
+        btnBuscar.addEventListener('click', buscarPokemon);
+    } else {
+        console.error("❌ ERROR: No se encontró el botón con id 'btnBuscarPokemon'");
+    }
+    
+    if (inputBuscar) {
+        console.log("✅ Input encontrado, asignando evento Enter");
+        inputBuscar.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                buscarPokemon();
+            }
+        });
+    } else {
+        console.error("❌ ERROR: No se encontró el input con id 'buscadorPokemon'");
+    }
+});
+
+
+function ocultarPantallaCarga() {
+    const splash = document.getElementById('splashScreen');
+    if (splash) {
+        splash.classList.add('hide');
+        
+        // Eliminar del DOM después de la animación
+        setTimeout(() => {
+            splash.style.display = 'none';
+        }, 800);
+    }
+}
+
+// Esperar a que todo el contenido esté cargado
+window.addEventListener('load', function() {
+    // Pequeño retraso para que se vea la animación completa
+    setTimeout(() => {
+        ocultarPantallaCarga();
+    }, 2000); // 2 segundos de carga
+});
+
+// También ocultar si el DOM está listo antes (por si acaso)
+document.addEventListener('DOMContentLoaded', function() {
+    // Si todo ya está cargado, igual esperar un poco
+    setTimeout(() => {
+        const splash = document.getElementById('splashScreen');
+        if (splash && !splash.classList.contains('hide')) {
+            ocultarPantallaCarga();
+        }
+    }, 2500);
+});
+
+
+const audio = new Audio();
+audio.preload = 'auto';
+audio.src = 'audio/Walking Through Kanto_ Every City Theme 🏠 Pokémon Lofi [C87ISXR-QPc].mp3'; 
+audio.load();
+audio.loop = true; 
+audio.volume = 0.5; 
+
+// Variables del reproductor
+let isMusicPlaying = false;
+let musicStarted = false;
+
+// Elementos del DOM
+const musicPlayer = document.getElementById('musicPlayer');
+const musicToggle = document.getElementById('musicToggle');
+const volumeSlider = document.getElementById('volumeSlider');
+const volumeValue = document.getElementById('volumeValue');
+const songName = document.getElementById('songName');
+
+// Cambiar el nombre de la canción (puedes personalizarlo)
+songName.textContent = '🎵 Pokémon Opening Theme';
+
+// Función para iniciar la música (requiere interacción del usuario)
+function iniciarMusica() {
+    if (!musicStarted) {
+        audio.play().then(() => {
+            isMusicPlaying = true;
+            musicStarted = true;
+            musicToggle.style.animation = 'pulseMusic 1s infinite';
+            console.log('🎵 Música iniciada');
+        }).catch(error => {
+            console.log('La música necesita interacción del usuario:', error);
+        });
+    }
+}
+
+// Función para pausar/reanudar música
+function toggleMusic() {
+    if (!musicStarted) {
+        iniciarMusica();
+        return;
+    }
+    
+    if (isMusicPlaying) {
+        audio.pause();
+        isMusicPlaying = false;
+        musicToggle.style.animation = 'none';
+        musicToggle.style.opacity = '0.7';
+        document.querySelector('.music-icon').textContent = '🔇';
+    } else {
+        audio.play();
+        isMusicPlaying = true;
+        musicToggle.style.animation = 'pulseMusic 2s infinite';
+        musicToggle.style.opacity = '1';
+        document.querySelector('.music-icon').textContent = '🎵';
+    }
+}
+
+// Función para cambiar volumen
+function cambiarVolumen() {
+    const volumen = volumeSlider.value / 100;
+    audio.volume = volumen;
+    volumeValue.textContent = volumeSlider.value + '%';
+    
+    // Cambiar ícono según volumen
+    const volumeIcon = document.querySelector('.volume-icon');
+    if (volumeSlider.value == 0) {
+        volumeIcon.textContent = '🔇';
+    } else if (volumeSlider.value < 30) {
+        volumeIcon.textContent = '🔈';
+    } else if (volumeSlider.value < 70) {
+        volumeIcon.textContent = '🔉';
+    } else {
+        volumeIcon.textContent = '🔊';
+    }
+}
+
+// Abrir/cerrar controles al hacer clic en el botón
+musicToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    musicPlayer.classList.toggle('open');
+});
+
+// Controlar volumen
+volumeSlider.addEventListener('input', cambiarVolumen);
+
+// Cerrar controles al hacer clic fuera
+document.addEventListener('click', (e) => {
+    if (!musicPlayer.contains(e.target)) {
+        musicPlayer.classList.remove('open');
+    }
+});
+
+// Iniciar música cuando el usuario interactúe con la página (primera vez)
+document.body.addEventListener('click', function primerClick() {
+    if (!musicStarted) {
+        iniciarMusica();
+    }
+    document.body.removeEventListener('click', primerClick);
+}, { once: true });
+
+// También intentar iniciar cuando se presiona cualquier tecla
+document.addEventListener('keydown', function primerTecla() {
+    if (!musicStarted) {
+        iniciarMusica();
+    }
+    document.removeEventListener('keydown', primerTecla);
+}, { once: true });
+
+  </script>
 </html>
